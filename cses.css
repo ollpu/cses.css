@@ -1,0 +1,109 @@
+body {
+    font-family: verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 8px;
+    overflow-y: scroll;
+}
+pre {
+    font-family: monospace;
+    font-size: 14px;
+    overflow-x: auto;
+}
+code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* Header */
+.header {
+    display: table;
+    width: 100%;
+}
+
+.header > div {
+    display: table-row;
+}
+
+.logo, .title, .login, .nav {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo, .login {
+    border-right: 1px solid black;
+}
+
+.logo {
+    padding: 8px 4px;
+}
+
+.title {
+    border-bottom: 1px solid #ddd;
+    padding-left: 16px;
+}
+
+.title > h1 {
+    font-size: 24px;
+    padding: none;
+}
+
+.login {
+    width: 200px;
+    height: 64px;
+    font-size: 14px;
+    border-bottom: 1px solid black;
+    padding: 0 4px;
+}
+
+.login > .actions {
+    font-size: 0;
+    display: block;
+}
+
+.login > .actions > a {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0 8px;
+    margin: 3px 0;
+    border-right: 1px solid gray;
+    text-decoration: none;
+    color: #009;
+    display: inline-block;
+}
+
+.login > .actions > a:first-of-type {
+    padding-left: 0;
+}
+
+.login > .actions > a:last-of-type {
+    border-right: none;
+}
+
+.nav {
+    font-size: 0;
+    padding: 6px 8px;
+    border-bottom: 1px solid black;
+}
+
+.nav > a {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 3px 8px;
+    margin: 3px 0;
+    border-right: 1px solid gray;
+    text-decoration: none;
+    color: #009;
+    display: inline-block;
+}
+
+.nav > a:last-of-type {
+    border-right: none;
+}
+
+.nav > a.current {
+    font-weight: bold;
+    color: black;
+}
+
+
