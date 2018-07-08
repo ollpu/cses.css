@@ -2,9 +2,37 @@ body {
     font-family: verdana, sans-serif;
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 8px;
+    padding: 0 8px 8px 8px;
     overflow-y: scroll;
 }
+
+/* General content elements */
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+thead tr {
+    border-bottom: 2px solid black;
+}
+
+td, th {
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: black;
+    padding: 1px 5px;
+}
+
+
 pre {
     font-family: monospace;
     font-size: 14px;
@@ -14,6 +42,14 @@ code {
     font-family: monospace;
     font-size: 14px;
 }
+
+
+/* Generic colors etc */
+.task-score { background-color: #ccc; }
+.task-score.full { background-color: #67ef5e; }
+.task-score.zero { background-color: #ef5e5e; }
+.task-score.partial { background-color: #f3f841; }
+
 
 /* Header */
 .header {
@@ -25,7 +61,7 @@ code {
     display: table-row;
 }
 
-.logo, .title, .login, .nav {
+.logo, .title, .login, .page-chooser {
     display: table-cell;
     vertical-align: middle;
 }
@@ -35,7 +71,7 @@ code {
 }
 
 .logo {
-    padding: 8px 4px;
+    padding: 8px;
 }
 
 .title {
@@ -45,7 +81,8 @@ code {
 
 .title > h1 {
     font-size: 24px;
-    padding: none;
+    padding: 0;
+    margin: 0;
 }
 
 .login {
@@ -53,57 +90,134 @@ code {
     height: 64px;
     font-size: 14px;
     border-bottom: 1px solid black;
-    padding: 0 4px;
-}
-
-.login > .actions {
-    font-size: 0;
-    display: block;
-}
-
-.login > .actions > a {
-    text-transform: uppercase;
-    font-size: 14px;
     padding: 0 8px;
-    margin: 3px 0;
-    border-right: 1px solid gray;
-    text-decoration: none;
-    color: #009;
-    display: inline-block;
 }
 
-.login > .actions > a:first-of-type {
-    padding-left: 0;
-}
-
-.login > .actions > a:last-of-type {
-    border-right: none;
-}
-
-.nav {
-    font-size: 0;
+.nav.page-chooser {
     padding: 6px 8px;
     border-bottom: 1px solid black;
 }
 
-.nav > a {
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 3px 8px;
+/* Navigation bars */
+.nav {
+    font-size: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav.login-actions {
+    margin-left: -8px;
+}
+
+.nav > li {
     margin: 3px 0;
     border-right: 1px solid gray;
-    text-decoration: none;
-    color: #009;
     display: inline-block;
 }
 
-.nav > a:last-of-type {
+.nav a {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    color: #009;
+    padding: 3px 8px;
+    outline: none;
+}
+
+.nav a:hover {
+    background-color: rgba(0,0,0, 8%);
+}
+.nav a:active {
+    background-color: rgba(0,0,0, 16%);
+    box-shadow: 0 0 4px rgba(0,0,0, 20%) inset;
+}
+
+.login-actions a {
+    padding: 0 8px;
+}
+
+.nav > li:last-child {
     border-right: none;
 }
 
-.nav > a.current {
+.nav a.current {
     font-weight: bold;
     color: black;
 }
 
+/* Front page boxes */
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 6px;
+}
+.boxes > div {
+    width: calc(50% - 20px);
+    min-height: 300px;
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #8EF39A;
+    display: inline-block;
+}
+.boxes > div:nth-child(4n+2) { background-color: #94B5EC; }
+.boxes > div:nth-child(4n+3) { background-color: #FFD996; }
+.boxes > div:nth-child(4n+4) { background-color: #FF9B96; }
 
+@media screen and (max-width: 700px) {
+    .boxes > div {
+        width: 100%;
+        min-height: 220px;
+    }
+}
+
+.boxes > div > h4 {
+    margin: 0;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid black;
+}
+
+/* Task lists */
+.task-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 640px;
+    border-width: 1px 1px 0;
+    border-style: solid;
+    border-color: #555;
+}
+
+.task-list > li {
+    display: flex;
+    line-height: 1.6;
+    border-bottom: 1px solid #555;
+    overflow: hidden;
+}
+
+.task-list a {
+    flex-grow: 1;
+}
+
+.task-list > li:before, .task-list b {
+    display: inline-block;
+    width: 45px;
+    text-align: center;
+}
+.task-list > .text:before { content: '⚠'; }
+.task-list > .link:before { content: '⚡'; }
+.task-list > .task:before { content: '★'; }
+
+.task-list span {
+    /* float in case flex isn't supported */
+    float: right;
+    width: 80px;
+    border-left: solid 1px #555;
+}
+
+.task-list .task-score {
+    text-align: center;
+    clear: right;
+}
