@@ -8,7 +8,10 @@
 <body>
     <div class="header">
         <div>
-            <a class="logo" href="/"><img src="/logo.png" alt="CSES"></a>
+            <div class="logo">
+                <a class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">⫶</a>
+                <a href="/"><img src="/logo.png" alt="CSES"></a>
+            </div>
             <div class="title">
                 <h1>Code Submission Evaluation System</h1>
             </div>
@@ -30,9 +33,15 @@
             </ul>
         </div>
     </div>
+    <div class="content-wrapper">
+    <div class="content">
+    
     <p>
     This is a reference implementation of cses.css, intended to
     showcase the styles and provide a reference for integration into CSES.
+    </p>
+    <p>
+    Work in progress.
     </p>
     
     Available pages:
@@ -40,15 +49,18 @@
         <li><a href="/">Home</a></li>
         <li><a href="/about.html">About (this page)</a></li>
         <li><a href="/courses">Course </a></li>
+        <li><a href="/courses/task.html">Course task</a></li>
     </ul>
     TODO:
     <ul>
-        <li><a>Course task</a></li>
         <li><a>Contest</a></li>
         <li><a>Contest task</a></li>
         <li><a>Contest entry</a></li>
         <li><a>Contest scoreboard</a></li>
         <li><a>Some admin pages</a></li>
     </ul>
+    
+    </div>
+    </div>
 </body>
 </html>
