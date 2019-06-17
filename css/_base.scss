@@ -1,0 +1,86 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: verdana, sans-serif;
+    overflow-y: scroll;
+}
+
+.header {
+  background-color: $header-color;
+  color: $header-text-color;
+  @include light-shadow(1, $header-shadow-darkness);
+  padding-top: $header-padding/2;
+  
+  a {
+    color: inherit;
+  }
+  
+  i {
+    font-size: 1.3rem;
+    vertical-align: middle;
+  }
+  
+  > div {
+    max-width: $default-width;
+    min-height: $header-height;
+    margin: 0 auto;
+    padding: 0 2*$header-padding 0 $header-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  // Only appears on mobile
+  .menu-toggle {
+    display: none;
+  }
+  img {
+    height: $header-height - 2*$header-padding;
+  }
+}
+
+.content-wrapper {
+  max-width: $default-width;
+  margin: 0 auto;
+}
+
+// Navigation buttons
+.nav {
+  font-size: 0;
+  padding: 0;
+  list-style: none;
+  
+  > li {
+    margin: 3px 0;
+    border-right: 1px solid gray;
+    display: inline-block;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    color: #009;
+    padding: 3px 8px;
+    outline: none;
+    &:hover {
+      background-color: rgba(black, 0.08);
+    }
+    &:active {
+      background-color: rgba(black, 0.16);
+    }
+    &.current {
+      font-weight: bold;
+      color: black;
+    }
+  }
+  
+  &.page-chooser {
+    padding: 6px 8px;
+    border-bottom: 1px solid black;
+  }
+}
+
