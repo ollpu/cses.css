@@ -1,3 +1,10 @@
 #!/bin/bash
 
-find css/ -not -path '*/\.*' | entr sassc -t compressed css/cses.scss cses.css
+CMD="sassc -t compressed css/cses.scss cses.css"
+
+if [ "$1" == "-l" ]
+then
+  find css/ -not -path '*/\.*' | entr $CMD
+else
+  $CMD
+fi
