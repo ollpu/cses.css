@@ -1,6 +1,4 @@
-
-
-/* Task lists */
+// Task lists
 .task-list {
   $item-line-height: 1.6;
   
@@ -25,9 +23,9 @@
       @include fontawesome();
     }
   }
-  > .text:before { content: "\f129"; }
-  > .link:before { content: "\f0c1"; }
-  > .task:before { content: "\f15c"; }
+  > .text:before { content: "\f129"; } // "info"
+  > .link:before { content: "\f0c1"; } // "link"
+  > .task:before { content: "\f15c"; } // "file-alt"
   a {
     flex-grow: 1;
   }
@@ -40,10 +38,9 @@
     // float in case flex isn't supported
     float: right;
     width: 5rem;
-    > i {
+    &.icon {
       line-height: 1/0.8*$item_line_height;
       font-size: 0.8em;
-      //color: lighten(black, 20%);
     }
   }
   .task-score {
@@ -52,7 +49,19 @@
   }
 }
 
-.task-score { background-color: task-score-bg-col(initial); }
-.task-score.full { background-color: task-score-bg-col(full); }
-.task-score.zero { background-color: task-score-bg-col(zero); }
-.task-score.partial { background-color: task-score-bg-col(partial); }
+.task-score {
+  background-color: task-score-bg-col(initial);
+  &.full { background-color: task-score-bg-col(full); }
+  &.zero { background-color: task-score-bg-col(zero); }
+  &.partial { background-color: task-score-bg-col(partial); }
+  &.icon {
+    &:before {
+      @include fontawesome();
+      content: '\f068'; // "minus"
+    }
+    &.full:before { content: '\f00c'; } // "check"
+    &.zero:before { content: '\f00d'; } // "times"
+  }
+}
+
+
