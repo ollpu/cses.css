@@ -3,34 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/cses.css">
+    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
     <title>CSES - Course page</title>
 </head>
 <body>
     <div class="header">
-        <div>
-            <div class="logo">
-                <a class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">⫶</a>
-                <a href="/"><img src="/logo.png" alt="CSES"></a>
-            </div>
-            <div class="title">
-                <h1>Example course</h1>
-            </div>
+      <div>
+        <a class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">⫶</a>
+        <div class="logo">
+            <a href="/"><img src="/logo.png" alt="CSES"></a>
         </div>
-        <div>
-            <div class="login">
-                Logged in: demo
-                <ul class="nav login-actions">
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Admin</a></li>
-                </ul>
-            </div>
-            <ul class="nav page-chooser">
-                <li><a class="current" href="/courses/">Tasks</a></li>
-                <li><a href="/contests/stats">Statistics</a></li>
-            </ul>
+        <div class="controls">
+          <a class="account" href="/account">demotili</a>
+          <span>&mdash;</span
+          ><a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a
+          ><a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
         </div>
+      </div>
     </div>
     <div class="content-wrapper">
+    
+    <h1>Example Course</h1>
+    
+    <ul class="nav page-chooser">
+      <li><a class="current" href="/">Tasks</a></li>
+      <li><a href="">Statistics</a></li>
+      <li><a href="">Hacks</a></li>
+    </ul>
+    
     <div class="content">
     
     <h2>General</h2>
@@ -44,21 +44,22 @@
     </ul>
     <h2>Chapter 1</h2>
     <ul class="task-list">
-        <li class="task"><a href="task.html">Example course task</a> <span class="task-score full">✓</span></li>
-        <li class="task"><a href="">Algoritmi</a> <span class="task-score full">✓</span></li>
-        <li class="task"><a href="">Bittijonot</a> <span class="task-score">-</span></li>
-        <li class="task"><a href="">Tilavuus</a> <span class="task-score zero">✗</span></li>
-        <li class="task"><a href="">Viikonpäivä</a> <span class="task-score">-</span></li>
+        <li class="task"><a href="task.html">Example course task</a> <span class="task-score full"><i class="fas fa-check"></i></span></li>
+        <li class="task"><a href="">Algoritmi</a> <span class="task-score full"><i class="fas fa-check"></i></span></li>
+        <li class="task"><a href="">Bittijonot</a> <span class="task-score"><i class="fas fa-minus"></i></span></li>
+        <li class="task"><a href="">Tilavuus</a> <span class="task-score zero"><i class="fas fa-times"></i></span></li>
+        <li class="task"><a href="">Viikonpäivä</a> <span class="task-score"><i class="fas fa-minus"></i></span></li>
     </ul>
     <h2>Chapter 2</h2>
     <ul class="task-list">
-        <li class="task"><a href="">Pisin toisto, pisin tehtävänimi, testitarkoituksessa</a> <span class="task-score">-</span></li>
-        <li class="task"><a href="">Puuttuva</a> <span class="task-score zero">✗</span></li>
-        <li class="task"><a href="">Spiraali</a> <span class="task-score zero">✗</span></li>
-        <li class="task"><a href="">Ratsut</a> <span class="task-score full">✓</span></li>
-        <li class="task"><a href="">Kertoma</a> <span class="task-score">-</span></li>
+        <li class="task"><a href="">Pisin toisto, pisin tehtävänimi, testitarkoituksessa</a> <span class="task-score"><i class="fas fa-minus"></i></span></li>
+        <li class="task"><a href="">Puuttuva</a> <span class="task-score zero"><i class="fas fa-times"></i></span></li>
+        <li class="task"><a href="">Spiraali</a> <span class="task-score zero"><i class="fas fa-times"></i></span></li>
+        <li class="task"><a href="">Ratsut</a> <span class="task-score full"><i class="fas fa-check"></i></span></li>
+        <li class="task"><a href="">Kertoma</a> <span class="task-score"><i class="fas fa-minus"></i></span></li>
     </ul>
     
+    </div>
     </div>
 </body>
 </html>

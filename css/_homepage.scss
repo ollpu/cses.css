@@ -5,10 +5,11 @@
   align-items: stretch;
   justify-content: space-between;
   > div {
-    width: calc(50% - 20px);
+    width: calc(50% - #{$default-side-padding/2});
+    box-sizing: border-box;
     min-height: 300px;
-    padding: 8px;
-    margin: 4px 0;
+    padding: $default-side-padding;
+    margin: $default-side-padding/2 0;
     background-color: #8EF39A;
     display: inline-block;
     @include light-shadow();
@@ -22,8 +23,8 @@
   }
   h4 {
     margin: 0;
-    padding-bottom: 4px;
-    margin-bottom: 4px;
+    padding-bottom: $box-title-spacing;
+    margin-bottom: $box-title-spacing;
     border-bottom: 1px solid black;
   }
 }

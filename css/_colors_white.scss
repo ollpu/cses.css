@@ -2,3 +2,20 @@
 $header-color: #292929;
 $header-text-color: white;
 $header-shadow-darkness: 0.4;
+
+$border-col: black;
+$light-border-col: lighten(black, 50%);
+
+$nav-item-text-col: #009;
+$nav-item-current-text-col: black;
+$nav-item-hover-col: darken(white, 8%);
+$nav-item-active-col: darken(white, 16%);
+
+@function task-score-bg-col($type) {
+  @return map-get((
+    initial: #ccc,
+    full:    #67ef5e,
+    zero:    #ef5e5e,
+    partial: #f3f841,
+  ), $type);
+}

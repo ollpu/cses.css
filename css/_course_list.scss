@@ -1,0 +1,58 @@
+
+
+/* Task lists */
+.task-list {
+  $item-line-height: 1.6;
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: $default-content-width;
+  border-top: 1px solid $border-col;
+  
+  > li {
+    display: flex;
+    line-height: $item-line-height;
+    border-bottom: 1px solid $border-col;
+    overflow: hidden;
+    &:hover {
+      background-color: $nav-item-hover-col;
+    }
+    &:before {
+      display: inline-block;
+      width: 45px;
+      text-align: center;
+      @include fontawesome();
+    }
+  }
+  > .text:before { content: "\f129"; }
+  > .link:before { content: "\f0c1"; }
+  > .task:before { content: "\f15c"; }
+  a {
+    flex-grow: 1;
+  }
+  b {
+    display: inline-block;
+    width: 2.8rem;
+    text-align: center;
+  }
+  span {
+    // float in case flex isn't supported
+    float: right;
+    width: 5rem;
+    > i {
+      line-height: 1/0.8*$item_line_height;
+      font-size: 0.8em;
+      //color: lighten(black, 20%);
+    }
+  }
+  .task-score {
+    text-align: center;
+    clear: right;
+  }
+}
+
+.task-score { background-color: task-score-bg-col(initial); }
+.task-score.full { background-color: task-score-bg-col(full); }
+.task-score.zero { background-color: task-score-bg-col(zero); }
+.task-score.partial { background-color: task-score-bg-col(partial); }

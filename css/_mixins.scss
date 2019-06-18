@@ -1,3 +1,13 @@
 @mixin light-shadow($size: 1, $darkness: 0.2) {
   box-shadow: 0 $light-shadow-size-base*$size $light-shadow-size-base*$size*4 rgba(black, $darkness);
 }
+
+@mixin fontawesome() {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+}

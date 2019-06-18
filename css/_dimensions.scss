@@ -1,8 +1,15 @@
 
 $default-width: 60rem;
+$default-side-padding: 0.5rem;
+$default-content-width: 40rem;
 
 $header-height: 2.4rem;
 $header-padding: 0.2rem;
 $header-shadow: 0.05rem;
 
 $light-shadow-size-base: 0.05rem;
+
+$nav-spacing-vert:  0.19rem;
+$nav-spacing-horiz: 0.5rem;
+
+$box-title-spacing: $default-side-padding/2;
