@@ -46,11 +46,12 @@ body {
 }
 
 .skeleton {
+  width: 100%;
   max-width: $default-width;
   margin: 0.5rem auto;
   display: table;
 }
-.site-title {
+.navigation {
   display: table-row;
   > h3 {
     border-bottom: 1px solid $border-col;
