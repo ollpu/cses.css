@@ -38,6 +38,7 @@
     // float in case flex isn't supported
     float: right;
     width: 5rem;
+    margin-left: .4rem;
     &.icon {
       line-height: 1/0.8*$item_line_height;
       font-size: 0.8em;
@@ -47,6 +48,17 @@
     text-align: center;
     clear: right;
   }
+}
+
+.sidebar.nav > a > span {
+  float: right;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  width: 2.5em;
+  text-align: center;
+  font-weight: normal;
+  color: black;
+  border: 1px solid opacify(black, 0.5);
 }
 
 .task-score {
@@ -64,4 +76,10 @@
   }
 }
 
-
+.task-limits {
+  float: right;
+  margin: 0.6rem 0.4rem;
+}
+.task-limits th {
+  text-align: left;
+}
