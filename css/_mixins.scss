@@ -11,3 +11,9 @@
   font-variant: normal;
   text-rendering: auto;
 }
+
+@mixin mobile() {
+  @media screen and (max-width: #{$responsive-mobile-breakoff}) {
+    @content;
+  }
+}

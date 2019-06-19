@@ -36,13 +36,14 @@ body {
     align-items: center;
   }
   
-  // Only appears on mobile
-  .menu-toggle {
-    display: none;
-  }
   img {
     height: $header-height - 2*$header-padding;
   }
+}
+
+// Only appears on mobile
+.menu-toggle {
+  display: none;
 }
 
 .skeleton {
@@ -62,10 +63,10 @@ body {
       color: $nav-item-text-col;
     }
   }
-  > div {
-    display: table-cell;
-  }
-  h1 {
+}
+.title-block {
+  display: table-cell;
+  > h1 {
     margin: 0.6em 2*$default-side-padding;
   }
 }
@@ -136,5 +137,27 @@ body {
 
 .content {
   padding: $default-side-padding;
+}
+
+@include mobile {
+  .menu-toggle {
+    display: block;
+  }
+  .sidebar {
+    border-right: none;
+  }
+  .title-block > h1 {
+    margin: 0.4em $default-side-padding;
+  }
+  body.menu-open {
+    .title-block, .content {
+      display: none;
+    }
+  }
+  body:not(.menu-open) {
+    .sidebar {
+      display: none;
+    }
+  }
 }
 
