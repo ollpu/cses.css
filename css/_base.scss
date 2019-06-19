@@ -10,7 +10,6 @@ body {
   background-color: $header-color;
   color: $header-text-color;
   @include light-shadow(1, $header-shadow-darkness);
-  padding-top: $header-padding/2;
   
   a {
     color: inherit;
