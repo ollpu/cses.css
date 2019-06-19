@@ -141,6 +141,12 @@ body {
 @include mobile {
   .menu-toggle {
     display: block;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  body.with-sidebar .menu-toggle {
+    opacity: 1;
+    pointer-events: all;
   }
   .sidebar {
     border-right: none;
