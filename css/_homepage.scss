@@ -7,18 +7,19 @@
   > div {
     width: calc(50% - #{$default-side-padding/2});
     box-sizing: border-box;
-    min-height: 300px;
+    min-height: 18.8rem;
     padding: $default-side-padding;
     margin: $default-side-padding/2 0;
-    background-color: #8EF39A;
     display: inline-block;
     @include light-shadow();
-    &:nth-child(4n+2) { background-color: #94B5EC; }
-    &:nth-child(4n+3) { background-color: #FFD996; }
-    &:nth-child(4n+4) { background-color: #FF9B96; }
-    @media screen and (max-width: 700px) {
+    @for $i from 1 through length($box-colors) {
+      &:nth-child(#{length($box-colors)}n+#{$i}) {
+        background-color: nth($box-colors, $i);
+      }
+    }
+    @media screen and (max-width: 45rem) {
       width: 100%;
-      min-height: 220px;
+      min-height: 13.6rem;
     }
   }
   h4 {
