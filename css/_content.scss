@@ -1,39 +1,56 @@
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 tr {
-    border-style: solid;
-    border-width: 1px 0;
-    border-color: $border-col;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: $border-col;
 }
 
 tbody tr:nth-child(even) {
-    background-color: $table-alt-row-col;
+  background-color: $secondary-bgcol;
 }
 
 thead tr {
-    border-bottom: 2px solid $border-col;
+  border-bottom: 2px solid $border-col;
 }
 
 td, th {
-    border-style: solid;
-    border-width: 0 1px;
-    border-color: $border-col;
-    padding: 0.06rem 0.3rem;
+  border-style: solid;
+  border-width: 0 1px;
+  border-color: $border-col;
+  padding: 0.06rem 0.3rem;
 }
 
 hr {
-    border: none;
-    border-top: 1px solid $border-col;
+  border: none;
+  border-top: 1px solid $border-col;
 }
 
 pre {
-    font-family: monospace;
-    font-size: 0.875rem;
-    overflow-x: auto;
+  font-family: monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+.io-example {
+  border: 1px solid $border-col;
+  background-color: $secondary-bgcol;
+  padding: 0.5rem;
+  @include light-shadow();
+  border-radius: 3px;
+  pre {
+    white-space: pre-wrap;
+    margin: 0.3rem 0 0.5rem;
+  }
+  h5 {
+    user-select: none;
+    margin: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
 }
 code {
-    font-family: monospace;
-    font-size: 0.875rem;
+  font-family: monospace;
+  font-size: 0.875rem;
 }
