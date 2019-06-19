@@ -3,36 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/cses.css">
+    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
     <title>CSES - About</title>
 </head>
 <body>
     <div class="header">
-        <div>
-            <div class="logo">
-                <a class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">⫶</a>
-                <a href="/"><img src="/logo.png" alt="CSES"></a>
-            </div>
-            <div class="title">
-                <h1>Code Submission Evaluation System</h1>
-            </div>
+      <div>
+        <a class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">
+          <i class="fas fa-bars"></i>
+        </a>
+        <div class="logo">
+            <a href="/"><img src="/logo.png" alt="CSES"></a>
         </div>
-        <div>
-            <div class="login">
-                Logged in: demo
-                <ul class="nav login-actions">
-                    <li><a href="">Logout</a></li>
-                    <li><a href="">Admin</a></li>
-                </ul>
-            </div>
-            <ul class="nav page-chooser">
-                <li><a href="/">Home</a></li>
-                <li><a href="/courses/">Courses</a></li>
-                <li><a href="/contests/">Contests</a></li>
-                <li><a href="/stats/">Statistics</a></li>
-                <li><a class="current" href="/about.html">About</a></li>
-            </ul>
+        <div class="controls">
+          <a class="account" href="/account">demotili</a>
+          <span>&mdash;</span>
+          <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a
+          ><a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
         </div>
+      </div>
     </div>
+    <div class="skeleton">
+    
+    <div class="navigation">
+      <div class="title-block">
+        <h1>Code Submission Evaluation System</h1>
+        
+        <ul class="nav page-chooser">
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses/">Courses</a></li>
+          <li><a href="/contests/">Contests</a></li>
+          <li><a href="/stats/">Statistics</a></li>
+          <li><a class="current" href="/about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    
     <div class="content-wrapper">
     <div class="content">
     
@@ -60,6 +66,7 @@
         <li><a>Some admin pages</a></li>
     </ul>
     
+    </div>
     </div>
     </div>
 </body>
