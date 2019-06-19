@@ -23,6 +23,9 @@
       @include fontawesome();
     }
   }
+  &.contest > li:before {
+    display: none;
+  }
   > .text:before { content: "\f129"; } // "info"
   > .link:before { content: "\f0c1"; } // "link"
   > .task:before { content: "\f15c"; } // "file-alt"
