@@ -23,13 +23,16 @@
       @include fontawesome();
     }
   }
-  &.contest > li:before {
+  &.headless > li:hover {
+    background-color: initial;
+  }
+  &.contest > li.task:before {
     display: none;
   }
   > .text:before { content: "\f129"; } // "info"
   > .link:before { content: "\f0c1"; } // "link"
   > .task:before { content: "\f15c"; } // "file-alt"
-  a {
+  a, div {
     flex-grow: 1;
   }
   b {
@@ -37,19 +40,32 @@
     width: 2.8rem;
     text-align: center;
   }
-  span {
-    // float in case flex isn't supported
+  $icon-size: 0.8;
+  $details-size: 0.8;
+  .task-score {
     float: right;
+    clear: right;
+    text-align: center;
     width: 5rem;
     margin-left: .4rem;
     &.icon {
-      line-height: 1/0.8*$item_line_height;
-      font-size: 0.8em;
+      font-size: $icon-size * 1em;
+      line-height: 1/$icon-size * $item-line-height;
     }
   }
-  .task-score {
-    text-align: center;
-    clear: right;
+  $headless-item-height: (1+$details-size)*$item-line-height;
+  &.headless .task-score {
+    line-height: $headless-item-height;
+    &.icon {
+      line-height: 1/$icon-size*$headless-item-height;
+    }
+  }
+  .details {
+    font-size: $details-size * 1em;
+    > span, > a {
+      display: inline-block;
+      min-width: 5em;
+    }
   }
 }
 
