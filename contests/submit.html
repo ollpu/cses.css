@@ -32,8 +32,8 @@
         <h1>Example Contest Task</h1>
         
         <ul class="nav page-chooser">
-          <li><a class="current" href="/courses/task.html">Statement</a></li>
-          <li><a href="submit.html">Submit</a></li>
+          <li><a href="/courses/task.html">Statement</a></li>
+          <li><a class="current" href="submit.html">Submit</a></li>
           <li><a href="">Results</a></li>
           <li><a href="">Analysis</a></li>
         </ul>
@@ -50,26 +50,23 @@
       </div>
     
       <div class="content">
-        <table class="task-limits">
-          <tr><th>Time limit:</th><td>1.00 s</td></tr>
-          <tr><th>Memory limit:</th><td>150 MB</td></tr>
-        </table>
-        Your task is to lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br />
-        <h4>Input</h4>
-        The only row of the input contains two integers: a and b.<br />
-        <h4>Output</h4>
-        The answer to the problem.<br />
-        <h4>Limits</h4>
-        <ul>
-        <li>1 &le; a, b &le; 10<br />
-        </ul>
-        <h4>Example</h4>
-        <div class="io-example">
-          <h5>Input:</h5>
-          <pre>3 5</pre>
-          <h5>Output:</h5>
-          <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</pre>
-        </div>
+        <form>
+          <section class="simple-form">
+            <label>
+              <span>File:</span>
+              <input type="file"></input>
+            </label>
+            <label>
+              <span>Language:</span>
+              <select name="lang" id="lang">
+                <option value="">?</option>
+                <option value="Assembly">Assembly</option><option value="C++">C++</option><option value="Haskell">Haskell</option><option value="Java">Java</option><option value="Node.js">Node.js</option><option value="Pascal">Pascal</option><option value="Python2">Python 2</option><option value="Python3">Python 3</option><option value="Ruby">Ruby</option><option value="Rust">Rust</option><option value="Scala">Scala</option>
+              </select>
+            </label>
+          </section>
+          <p>Text editor (with drag and drop functionality) here?</p>
+          <input type="submit" value="Submit"></input>
+        </form>
       </div>
     </div>
   
