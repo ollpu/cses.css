@@ -69,15 +69,26 @@
   }
 }
 
-.sidebar.nav > a > span {
-  float: right;
-  flex-shrink: 0;
-  font-size: 0.75rem;
-  width: 2.5em;
-  text-align: center;
-  font-weight: normal;
-  color: black;
-  border: 1px solid opacify(black, 0.5);
+.sidebar.nav {
+  > hr {
+    border-color: $light-border-col;
+  }
+  > a {
+    b {
+      margin-right: 0.3em;
+      color: $text-col;
+    }
+    > .task-score {
+      float: right;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      width: 2.5em;
+      text-align: center;
+      font-weight: normal;
+      color: $text-col;
+      border: 1px solid opacify(black, 0.5);
+    }
+  }
 }
 
 .task-score {
