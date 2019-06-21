@@ -17,10 +17,10 @@ $nav-item-active-col: darken(white, 16%);
 
 @function task-score-bg-col($type) {
   @return map-get((
-    initial: #ccc,
-    full:    #67ef5e,
-    zero:    #ef5e5e,
-    partial: #f3f841,
+    initial: #c8c8c8,
+    full:    #6ff079,
+    zero:    #f06f6f,
+    partial: #f0f36a,
   ), $type);
 }
 
