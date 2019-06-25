@@ -125,10 +125,7 @@
 .scoreboard {
   margin: 0 auto;
   a {
-    color: $nav-item-text-col;
-    &:visited {
-      color: black;
-    }
+    color: $text-col;
   }
   > tbody > tr {
     background-color: initial;
