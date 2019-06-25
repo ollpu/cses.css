@@ -78,6 +78,12 @@ body {
   vertical-align: top;
   &.nav {
     font-size: inherit;
+    > h4 {
+      margin: 0.8em 0 0.5em 0;
+    }
+    > hr {
+      border-color: $light-border-col;
+    }
     > a {
       display: block;
       display: flex;
@@ -86,6 +92,10 @@ body {
       align-items: center;
       padding: 0.2rem $default-side-padding;
       margin: 0 (-$default-side-padding);
+      b {
+        margin-right: 0.3em;
+        color: $text-col;
+      }
     }
   }
 }
