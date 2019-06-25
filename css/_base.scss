@@ -51,7 +51,6 @@ body {
   margin: 0.5rem auto;
 }
 .navigation {
-  overflow: hidden;
   > h3 {
     border-bottom: 1px solid $border-col;
     vertical-align: bottom;
@@ -63,8 +62,10 @@ body {
   }
 }
 .title-block {
+  overflow: none;
   > h1 {
-    margin: 0.6em 2*$default-side-padding;
+    padding: 0.6em 2*$default-side-padding;
+    margin: 0;
   }
 }
 .sidebar {
@@ -150,6 +151,7 @@ body.with-sidebar {
   &.page-chooser {
     padding: 2*$nav-spacing-vert $default-side-padding;
     border-bottom: 1px solid $border-col;
+    clear: both;
   }
 }
 
@@ -167,7 +169,7 @@ body.with-sidebar {
     border-right: none;
   }
   .title-block > h1 {
-    margin: 0.4em $default-side-padding;
+    padding: 0.4em $default-side-padding;
   }
   body.menu-open {
     .title-block, .content {

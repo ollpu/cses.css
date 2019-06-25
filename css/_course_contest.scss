@@ -94,6 +94,38 @@
   }
 }
 
+.contest-time {
+  list-style-type: none;
+  margin: 2*$default-side-padding;
+  margin: $default-side-padding 2*$default-side-padding $default-side-padding/2 2*$default-side-padding;
+  padding: 0;
+  font-size: 1rem;
+  display: table;
+  font-weight: normal;
+  float: right;
+  > li {
+    display: table-row;
+  }
+  b {
+    display: table-cell;
+    text-align: right;
+    padding-right: 0.5em;
+  }
+  span {
+    display: table-cell;
+  }
+}
+@include mobile {
+  .contest-time {
+    font-size: 0.8rem;
+  }
+  .title-block h1 {
+    clear: both;
+  }
+}
+
+
+
 .task-limits {
   float: right;
   margin: 0.6rem 0.4rem;
