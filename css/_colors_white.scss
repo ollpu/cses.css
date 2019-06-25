@@ -15,12 +15,20 @@ $nav-item-current-text-col: black;
 $nav-item-hover-col: darken(white, 8%);
 $nav-item-active-col: darken(white, 16%);
 
+$fancy-link-color: $nav-item-text-col;
+$visited-fancy-link-color: #03002c;
+
 @function task-score-bg-col($type) {
   @return map-get((
     initial: #c8c8c8,
     full:    #6ff079,
     zero:    #f06f6f,
     partial: #f0f36a,
+      
+    icpc-initial: #eaeaea,
+    icpc-solved:  #84f38d,
+    icpc-failed:  #f38484,
+    icpc-first:   #16b923,
   ), $type);
 }
 

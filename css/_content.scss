@@ -8,11 +8,11 @@ tr {
   border-color: $border-col;
 }
 
-tbody tr:nth-child(even) {
+tbody > tr:nth-child(even) {
   background-color: $secondary-bgcol;
 }
 
-thead tr {
+thead > tr {
   border-bottom: 2px solid $border-col;
 }
 
@@ -20,7 +20,7 @@ td, th {
   border-style: solid;
   border-width: 0 1px;
   border-color: $border-col;
-  padding: 0.06rem 0.3rem;
+  padding: 0.06em 0.4em;
 }
 
 hr {

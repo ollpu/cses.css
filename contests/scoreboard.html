@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/cses.css">
+    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
+    <title>CSES - Contest Scoreboard</title>
+</head>
+<body>
+    <div class="header">
+      <div>
+        <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+          <i class="fas fa-bars"></i>
+        </a>
+        <div class="logo">
+            <a href="/"><img src="/logo.png" alt="CSES"></a>
+        </div>
+        <div class="controls">
+          <a class="account" href="/account">demotili</a>
+          <span>&mdash;</span>
+          <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+          <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="skeleton">
+    
+    <div class="navigation">
+      <div class="title-block">
+        <h1>Example Contest</h1>
+        
+        <ul class="nav page-chooser">
+          <li><a href="contest.html">Tasks</a></li>
+          <li><a class="current" href="scoreboard.html">Scoreboard</a></li>
+          <li><a href="">Statistics</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="content-wrapper">
+      <div class="content">
+        <input type="range" min="0" max="200" value="60" step="1" id="cslider" />
+        <span id="cvalue"></span>
+        <p><a href="scoreboard_icpc.html">Show ICPC-style scoreboard</a></p>
+      </div>
+      <div class="scoreboard-wrapper">
+      <table class="scoreboard ioi">
+      <colgroup>
+        <col class="rank" />
+        <col class="name" />
+        <col class="score" />
+        <col class="task" span=7 />
+      </colgroup>
+<thead><tr><th >#</th><th >name</th><th >score</th><th ><a href title="Summa">A</a></th><th ><a href title="Bittijono">B</a></th><th ><a href title="Auringonlasku">C</a></th><th ><a href title="Binääripuu">D</a></th><th ><a href title="Funktio">E</a></th><th ><a href title="Robotti">F</a></th><th ><a href title="Luokittelija">G</a></th></tr></thead>
+<tr><td >1</td><td ><a href>Santeri Toivonen</a></td><td class="contest-score">412</td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>99</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score"><a href>0</a></td></tr>
+<tr><td >2</td><td ><a href="?a=1">Roope Salmi</a></td><td class="contest-score">412</td><td class="task-score"><a href>95</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >3</td><td ><a href="?a=2">Olli Järviniemi</a></td><td class="contest-score">328</td><td class="task-score"><a href>90</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >4</td><td ><a href>Tuomas Katajisto</a></td><td class="contest-score">328</td><td class="task-score"><a href>85</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>100</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >5</td><td ><a href>Matias Järvenpää</a></td><td class="contest-score">312</td><td class="task-score"><a href>80</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>51</a></td><td class="task-score"><a href>49</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >6</td><td ><a href>Into Almiala</a></td><td class="contest-score">277</td><td class="task-score"><a href>75</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>49</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >7</td><td ><a href>Samu Huovinen</a></td><td class="contest-score">254</td><td class="task-score"><a href>70</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>26</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >8</td><td ><a href>Rudolf Laine</a></td><td class="contest-score">251</td><td class="task-score"><a href>65</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>51</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >9</td><td ><a href>Pekka Ristola</a></td><td class="contest-score">248</td><td class="task-score"><a href>60</a></td><td class="task-score"><a href>48</a></td><td class="task-score"><a href>51</a></td><td class="task-score"><a href>49</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >10</td><td ><a href>Tuukka Yildirim</a></td><td class="contest-score">228</td><td class="task-score"><a href>55</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >11</td><td ><a href>Alexander Popov</a></td><td class="contest-score">228</td><td class="task-score"><a href>50</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>16</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >12</td><td ><a href>Tuomas Simula</a></td><td class="contest-score">225</td><td class="task-score"><a href>45</a></td><td class="task-score"><a href>48</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>49</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >13</td><td ><a href>Valtteri Aurela</a></td><td class="contest-score">225</td><td class="task-score"><a href>40</a></td><td class="task-score"><a href>48</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>49</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score"><a href>0</a></td></tr>
+<tr><td >14</td><td ><a href>Dan Näsman</a></td><td class="contest-score">190</td><td class="task-score"><a href>35</a></td><td class="task-score"><a href>48</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>26</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >15</td><td ><a href>Kerkko Konola</a></td><td class="contest-score">164</td><td class="task-score"><a href>30</a></td><td class="task-score"><a href>48</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >16</td><td ><a href>Ilmari Ayres</a></td><td class="contest-score">161</td><td class="task-score"><a href>25</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score"><a href>49</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >17</td><td ><a href>Valtteri Ilola</a></td><td class="contest-score">149</td><td class="task-score"><a href>20</a></td><td class="task-score"><a href>21</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score"><a href>0</a></td></tr>
+<tr><td >18</td><td ><a href>Henri Ahola</a></td><td class="contest-score">149</td><td class="task-score"><a href>15</a></td><td class="task-score"><a href>21</a></td><td class="task-score"><a href>16</a></td><td class="task-score"><a href>0</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
+<tr><td >19</td><td ><a href>Kauri Pälsi</a></td><td class="contest-score">116</td><td class="task-score"><a href>10</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>16</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >20</td><td ><a href>Tässä on tosi pitkä nimi, joka pitää lyhentää</a></td><td class="contest-score">116</td><td class="task-score"><a href>5</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>16</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+<tr><td >21</td><td ><a href>Juuh Elikkäs</a></td><td class="contest-score">116</td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>1</a></td><td class="task-score"><a href>16</a></td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td><td class="task-score">-</td></tr>
+</table>
+</div>
+<script>
+function ccols(param) {
+  param = parseInt(param)/100;
+  var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
+  const mult = 0.696, offs = 0.189;
+  cells.forEach(function(cell) {
+    if (cell.innerText == "-") return;
+    var x = parseInt(cell.innerText);
+    if (cell.classList.contains("contest-score")) {
+      x /= 700;
+    } else {
+      x /= 100;
+    }
+    var r, g, b=0;
+    if (x < 0.5) {
+      r = 1;
+      g = Math.pow(2*x, param);
+      b = 0;
+    } else {
+      r = Math.pow(2-2*x, param);
+      g = 1;
+      b = 0;
+    }
+    r = offs+r*mult;
+    g = offs+g*mult;
+    b = offs+b*mult;
+    r = Math.round(Math.sqrt(r)*255);
+    g = Math.round(Math.sqrt(g)*255);
+    b = Math.round(Math.sqrt(b)*255);
+    cell.style.background = "rgba("+r+","+g+","+b+")";
+  });
+}
+var slider = document.getElementById("cslider");
+var value = document.getElementById("cvalue");
+ccols(slider.value);
+slider.oninput = function() {
+  value.innerText = slider.value;
+  ccols(slider.value);
+}
+</script>
+    </div>
+    
+    </div>
+</body>
+</html>
