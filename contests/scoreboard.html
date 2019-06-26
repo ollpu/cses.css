@@ -1,62 +1,62 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/cses.css">
-    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
-    <title>CSES - Contest Scoreboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/cses.css">
+  <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
+  <title>CSES - Contest Scoreboard</title>
 </head>
 <body>
-    <div class="header">
-      <div>
-        <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
-          <i class="fas fa-bars"></i>
-        </a>
-        <div class="logo">
-            <a href="/"><img src="/logo.png" alt="CSES"></a>
-        </div>
-        <div class="controls">
-          <a class="account" href="/account">demotili</a>
-          <span>&mdash;</span>
-          <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
-          <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
-        </div>
+  <div class="header">
+    <div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="logo">
+          <a href="/"><img src="/logo.png" alt="CSES"></a>
+      </div>
+      <div class="controls">
+        <a class="account" href="/account">demotili</a>
+        <span>&mdash;</span>
+        <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+        <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
       </div>
     </div>
-    <div class="skeleton">
-    
-    <div class="navigation">
-      <div class="title-block">
-        <ul class="contest-time">
-          <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
-          <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
-          <li><b>Time left:</b> <span>4:48:12</span></li>
-        </ul>
-        <h1>Example Contest</h1>
-        <ul class="nav page-chooser">
-          <li><a href="contest.html">Tasks</a></li>
-          <li><a class="current" href="scoreboard.html">Scoreboard</a></li>
-          <li><a href="">Statistics</a></li>
-        </ul>
-      </div>
+  </div>
+  <div class="skeleton">
+  
+  <div class="navigation">
+    <div class="title-block">
+      <ul class="contest-time">
+        <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
+        <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
+        <li><b>Time left:</b> <span>4:48:12</span></li>
+      </ul>
+      <h1>Example Contest</h1>
+      <ul class="nav page-chooser">
+        <li><a href="contest.html">Tasks</a></li>
+        <li><a class="current" href="scoreboard.html">Scoreboard</a></li>
+        <li><a href="">Statistics</a></li>
+      </ul>
     </div>
-    
-    <div class="content-wrapper">
-      <div class="content">
-        Gradient parameter demo: 
-        <input type="range" min="0" max="200" value="60" step="1" id="cslider" 
-               style="vertical-align: middle;" />
-        <span id="cvalue">60</span>
-        <p><a href="scoreboard_icpc.html">Show ICPC-style scoreboard</a></p>
-      </div>
-      <div class="scoreboard-wrapper">
-      <table class="scoreboard ioi">
-      <colgroup>
-        <col class="rank" />
-        <col class="name" />
-        <col class="score" />
-        <col class="task" span=7 />
-      </colgroup>
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="content">
+      Gradient parameter demo: 
+      <input type="range" min="0" max="200" value="60" step="1" id="cslider" 
+             style="vertical-align: middle;" />
+      <span id="cvalue">60</span>
+      <p><a href="scoreboard_icpc.html">Show ICPC-style scoreboard</a></p>
+    </div>
+    <div class="scoreboard-wrapper">
+    <table class="scoreboard ioi">
+    <colgroup>
+      <col class="rank" />
+      <col class="name" />
+      <col class="score" />
+      <col class="task" span=7 />
+    </colgroup>
 <thead><tr><th >#</th><th >name</th><th >score</th><th ><a href title="Summa">A</a></th><th ><a href title="Bittijono">B</a></th><th ><a href title="Auringonlasku">C</a></th><th ><a href title="Binääripuu">D</a></th><th ><a href title="Funktio">E</a></th><th ><a href title="Robotti">F</a></th><th ><a href title="Luokittelija">G</a></th></tr></thead>
 <tr><td >1</td><td ><a href>Santeri Toivonen</a></td><td class="contest-score">412</td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>99</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score">-</td><td class="task-score"><a href>12</a></td><td class="task-score"><a href>0</a></td></tr>
 <tr><td >2</td><td ><a href="?a=1">Roope Salmi</a></td><td class="contest-score">412</td><td class="task-score"><a href>95</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>100</a></td><td class="task-score"><a href>0</a></td><td class="task-score"><a href>12</a></td><td class="task-score">-</td></tr>
@@ -83,46 +83,46 @@
 </div>
 <script>
 function ccols(param) {
-  param = parseInt(param)/100;
-  var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
-  const mult = 0.696, offs = 0.189;
-  cells.forEach(function(cell) {
-    if (cell.innerText == "-") return;
-    var x = parseInt(cell.innerText);
-    if (cell.classList.contains("contest-score")) {
-      x /= 700;
-    } else {
-      x /= 100;
-    }
-    var r, g, b=0;
-    if (x < 0.5) {
-      r = 1;
-      g = Math.pow(2*x, param);
-      b = 0;
-    } else {
-      r = Math.pow(2-2*x, param);
-      g = 1;
-      b = 0;
-    }
-    r = offs+r*mult;
-    g = offs+g*mult;
-    b = offs+b*mult;
-    r = Math.round(Math.sqrt(r)*255);
-    g = Math.round(Math.sqrt(g)*255);
-    b = Math.round(Math.sqrt(b)*255);
-    cell.style.background = "rgba("+r+","+g+","+b+")";
-  });
+param = parseInt(param)/100;
+var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
+const mult = 0.696, offs = 0.189;
+cells.forEach(function(cell) {
+  if (cell.innerText == "-") return;
+  var x = parseInt(cell.innerText);
+  if (cell.classList.contains("contest-score")) {
+    x /= 700;
+  } else {
+    x /= 100;
+  }
+  var r, g, b=0;
+  if (x < 0.5) {
+    r = 1;
+    g = Math.pow(2*x, param);
+    b = 0;
+  } else {
+    r = Math.pow(2-2*x, param);
+    g = 1;
+    b = 0;
+  }
+  r = offs+r*mult;
+  g = offs+g*mult;
+  b = offs+b*mult;
+  r = Math.round(Math.sqrt(r)*255);
+  g = Math.round(Math.sqrt(g)*255);
+  b = Math.round(Math.sqrt(b)*255);
+  cell.style.background = "rgba("+r+","+g+","+b+")";
+});
 }
 var slider = document.getElementById("cslider");
 var value = document.getElementById("cvalue");
 ccols(slider.value);
 slider.oninput = function() {
-  value.innerText = slider.value;
-  ccols(slider.value);
+value.innerText = slider.value;
+ccols(slider.value);
 }
 </script>
-    </div>
-    
-    </div>
+  </div>
+  
+  </div>
 </body>
 </html>
