@@ -27,8 +27,12 @@
     
     <div class="navigation">
       <div class="title-block">
+        <ul class="contest-time">
+          <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
+          <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
+          <li><b>Time left:</b> <span>4:48:12</span></li>
+        </ul>
         <h1>Example Contest</h1>
-        
         <ul class="nav page-chooser">
           <li><a href="contest.html">Tasks</a></li>
           <li><a class="current" href="scoreboard.html">Scoreboard</a></li>
@@ -39,8 +43,10 @@
     
     <div class="content-wrapper">
       <div class="content">
-        <input type="range" min="0" max="200" value="60" step="1" id="cslider" />
-        <span id="cvalue"></span>
+        Gradient parameter demo: 
+        <input type="range" min="0" max="200" value="60" step="1" id="cslider" 
+               style="vertical-align: middle;" />
+        <span id="cvalue">60</span>
         <p><a href="scoreboard_icpc.html">Show ICPC-style scoreboard</a></p>
       </div>
       <div class="scoreboard-wrapper">

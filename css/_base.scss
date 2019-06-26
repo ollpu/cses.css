@@ -51,11 +51,14 @@ body {
   margin: 0.5rem auto;
 }
 .navigation {
-  > h3 {
+  > .sidebar {
     border-bottom: 1px solid $border-col;
     vertical-align: bottom;
     display: table-cell;
-    > a {
+    > h3 {
+      margin: 0.5em 0;
+    }
+    a {
       text-decoration: none;
       color: $nav-item-text-col;
     }
