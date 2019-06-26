@@ -84,10 +84,11 @@ input[type="submit"], button {
   font-family: inherit;
   
   cursor: pointer;
-  outline: 0;
-  &::-moz-focus-inner {
-    border: 0;
-  }
+  // Needs hover styles
+  // outline: 0;
+  // &::-moz-focus-inner {
+  //   border: 0;
+  // }
   
   @include light-shadow();
   &:active {
