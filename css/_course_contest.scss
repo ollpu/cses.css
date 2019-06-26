@@ -94,11 +94,8 @@
     &.full:before { content: '\f00c'; } // "check"
     &.zero:before { content: '\f00d'; } // "times"
     &.busted:before { content: '\f714'; } // "skull-crossbones"
-    &.pending:before { content: '\f128'; } // "question"
+    &.pending:before { content: '\f059'; font-weight: 400; } // "question-circle"
   }
-}
-td.task-score:before {
-  font-size: 0.9em;
 }
 
 .contest-time {
