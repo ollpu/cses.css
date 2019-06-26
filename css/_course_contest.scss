@@ -97,6 +97,9 @@
     &.pending:before { content: '\f128'; } // "question"
   }
 }
+td.task-score:before {
+  font-size: 0.9em;
+}
 
 .contest-time {
   list-style-type: none;
