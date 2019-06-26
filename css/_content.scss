@@ -75,6 +75,27 @@ code {
   }
 }
 
+// Common table styles
+.full-width {
+  width: 100%;
+}
+.brief-col {
+  min-width: 6em;
+}
+.details-col {
+  width: 1em;
+}
+.details-link {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    font-size: 1.2rem;
+    @include fontawesome();
+    content: '\f101'; // "angle-double-right"
+  }
+}
+
+
 input[type="submit"], button {
   background: $bgcol;
   color: $text-col;

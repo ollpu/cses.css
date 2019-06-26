@@ -73,17 +73,19 @@
   flex-shrink: 0;
   font-size: 0.75rem;
   width: 2.5em;
-  text-align: center;
   font-weight: normal;
   color: $text-col;
   border: 1px solid opacify(black, 0.5);
 }
 
 .task-score {
+  text-align: center;
   background-color: task-score-bg-col(initial);
   &.full { background-color: task-score-bg-col(full); }
   &.zero { background-color: task-score-bg-col(zero); }
   &.partial { background-color: task-score-bg-col(partial); }
+  &.busted { background-color: task-score-bg-col(busted); }
+  &.pending { background-color: task-score-bg-col(pending); }
   &.icon {
     &:before {
       @include fontawesome();
@@ -91,6 +93,8 @@
     }
     &.full:before { content: '\f00c'; } // "check"
     &.zero:before { content: '\f00d'; } // "times"
+    &.busted:before { content: '\f714'; } // "skull-crossbones"
+    &.pending:before { content: '\f128'; } // "question"
   }
 }
 
