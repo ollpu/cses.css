@@ -1,0 +1,222 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/cses.css">
+  <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/gcp/prettify.css">
+  <title>CSES - Contest task submission</title>
+  <script>
+    function check_hash() {
+      var hash = window.location.hash.substr(1);
+      if (!hash) return;
+      var e = document.getElementById(hash);
+      if (!e) return;
+      var p = e.closest(".closed");
+      if (!p) return;
+      p.classList.remove("closed");
+      e.scrollIntoView();
+    }
+    window.onload = function() {
+      var captions = document.getElementsByClassName("close-trigger");
+      var callback = function(e) {
+        e.target.closest(".closeable").classList.toggle('closed');
+      }
+      for (var i = 0; i < captions.length; i++) {
+        captions[i].addEventListener("click", callback);
+      }
+      check_hash();
+    }
+    window.onhashchange = check_hash;
+  </script>
+</head>
+<body class="with-sidebar">
+  <div class="header">
+    <div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="logo">
+          <a href="/"><img src="/logo.png" alt="CSES"></a>
+      </div>
+      <div class="controls">
+        <a class="account" href="/account">demotili</a>
+        <span>&mdash;</span>
+        <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+        <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="skeleton">
+  
+  <div class="navigation">
+    <div class="sidebar">
+      <h3><a href="./contest.html">Example Contest</a></h3>
+      <b>Time left:</b> <span>4:48:12</span>
+    </div>
+    
+    <div class="title-block">
+      <h1>Example Contest Task</h1>
+      
+      <ul class="nav page-chooser">
+        <li><a href="task.html">Statement</a></li>
+        <li><a href="submit.html">Submit</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="">Analysis</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="nav sidebar">
+      <a class="current" href><span><b>A</b> Example Contest Task</span> <span class="task-score full">100</span></a>
+      <a href><span><b>B</b> Algoritmi</span> <span class="task-score zero">0</span></a>
+      <a href><span><b>C</b> Bittijonot</span> <span class="task-score partial">34</span></a>
+      <a href><span><b>E</b> Tilavuus</span> <span class="task-score icon"></span></a>
+      <a href><span><b>F</b> Viikonpäivä</span> <span class="task-score full">100</span></a>
+      <hr />
+      <h4>Submissions</h4>
+      <a href="result.html" class="current">2018-10-07 14:55:05 <span class="task-score full">100</span></a>
+      <a href="result.html">2018-10-06 14:23:46 <span class="task-score partial">56</span></a>
+      <a href="result.html">2018-10-03 08:12:32 <span class="task-score zero">0</span></a>
+      <hr />
+    </div>
+  
+    <div class="content">
+      <table class="summary-table left-align narrow">
+        <caption>Submission details</caption>
+        <tr><th>Task:</th><td>Example Contest Task</td></tr>
+        <tr><th>Sender:</th><td>demotili</td></tr>
+        <tr><th>Submission time:</th><td>2018-10-03 13:12:51</td></tr>
+        <tr><th>Language:</th><td>C++17</td></tr>
+        <tr><th>Status:</th><td>READY</td></tr>
+        <tr><th>Score:</th><td><span class="inline-score task-score partial">14</span></td></tr>
+      </table>
+      <table class="narrow closeable">
+        <caption class="close-trigger">Feedback</caption>
+        <thead>
+          <tr><th>group</th><th>verdict</th><th>score</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>#1</td><td class="verdict ac">ACCEPTED</td><td>14</td></tr>
+          <tr><td>#2</td><td class="verdict wa">WRONG ANSWER</td><td>0</td></tr>
+          <tr><td>#3</td><td class="verdict tle">TIME LIMIT EXCEEDED</td><td>0</td></tr>
+          <tr><td>#4</td><td class="verdict rte">RUNTIME ERROR</td><td>0</td></tr>
+          <tr><td>#5</td><td class="verdict mle">MEMORY LIMIT EXCEEDED</td><td>0</td></tr>
+        </tbody>
+      </table>
+      <blockquote>It's too colorful <footer>&mdash; pllk</footer></blockquote>
+      <table class="full-width closeable">
+        <!-- This has to be done like this in order to:
+               - make the element viewable when JS is disabled
+               - prevent the element from flashing open when loading the page
+                 (global callback won't do) -->
+        <script>document.currentScript.parentNode.classList.add("closed")</script>
+        <caption class="close-trigger">Test results</caption>
+        <colgroup>
+          <col />
+          <col />
+          <col class="brief-col"/>
+          <col class="brief-col" />
+          <col class="details-col" />
+        </colgroup>
+        <thead>
+          <tr><th>test</th><th>verdict</th><th>time (s)</th><th>group</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr><td>#1</td><td class="verdict ac">ACCEPTED</td><td>0.02 / 1.00</td><td>1</td><td><a class="details-link" href="#test1">details</a></td></tr>
+          <tr><td>#2</td><td class="verdict ac">ACCEPTED</td><td>0.02 / 1.00</td><td>1</td><td><a class="details-link" href="#test2">details</a></td></tr>
+          <tr><td>#3</td><td class="verdict ac">ACCEPTED</td><td>0.03 / 1.00</td><td>2</td><td><a class="details-link" href="#test3">details</a></td></tr>
+          <tr><td>#4</td><td class="verdict wa">WRONG ANSWER</td><td>0.02 / 1.00</td><td>2</td><td><a class="details-link" href="#test4">details</a></td></tr>
+          <tr><td>#5</td><td class="verdict tle">TIME LIMIT EXCEEDED</td><td>0.03 / 1.00</td><td>3</td><td><a class="details-link" href="#test5">details</a></td></tr>
+          <tr><td>#6</td><td class="verdict tle">TIME LIMIT EXCEEDED</td><td>0.02 / 1.00</td><td>3</td><td><a class="details-link" href="#test6">details</a></td></tr>
+          <tr><td>#7</td><td class="verdict rte">RUNTIME ERROR</td><td>0.02 / 1.00</td><td>4</td><td><a class="details-link" href="#test7">details</a></td></tr>
+          <tr><td>#8</td><td class="verdict mle">MEMORY LIMIT EXCEEDED</td><td>0.02 / 1.00</td><td>5</td><td><a class="details-link" href="#test8">details</a></td></tr>
+        </tbody>
+      </table>
+      <div class="closeable">
+        <h3 class="caption close-trigger">Code</h3>
+        <div>
+          <script src="https://cses.fi/lib/google-code-prettify/run_prettify.js"></script>
+          <pre class="prettyprint linenums">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main() {
+  int a, b;
+  cin &gt;&gt; a &gt;&gt; b;
+  cout &lt;&lt; a+b &lt;&lt; endl;
+  if (a) if (b) if (c) if (...) if (pitkä rivi) for (int i = 0; i &lt; ni; ++i) for (int j = 0; j &lt; nj; ++j) for (int k = 0; k &lt; nk; ++k) x; 
+}
+</pre>
+        </div>
+      </div>
+      <hr />
+      <div class="closeable">
+        <script>document.currentScript.parentNode.classList.add("closed")</script>
+        <h3 class="caption close-trigger">Test details</h3>
+        <div>
+          <h4><a id="test1">Test 1 (group 1)</a></h4>
+          <p>Verdict: <span class="inline-score verdict ac">ACCEPTED</span></p>
+          <table class="narrow">
+            <tr><th>input</th></tr>
+            <tr><td>
+              <samp>1 1</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>correct output</th></tr>
+            <tr><td>
+              <samp>2</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>user output</th></tr>
+            <tr><td>
+              <samp>2</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+          </table>
+          <h4><a id="test2">Test 2 (group 1)</a></h4>
+          <p>Verdict: <span class="inline-score verdict ac">ACCEPTED</span></p>
+          <table class="narrow">
+            <tr><th>input</th></tr>
+            <tr><td>
+              <samp>1234 12345</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>correct output</th></tr>
+            <tr><td>
+              <samp>13579</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>user output</th></tr>
+            <tr><td>
+              <samp>13579</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+          </table>
+          ...
+          <h4><a id="test4">Test 4 (group 2)</a></h4>
+          <p>Verdict: <span class="inline-score verdict wa">WRONG ANSWER</span></p>
+          <table class="narrow">
+            <tr><th>input</th></tr>
+            <tr><td>
+              <samp>123467 123467 1324678 1324689 1324 9876 12349876 987632149876 9812349876 1349876 98349876 13248976 13248976 987613249876 13249876 98712349876 12349876 8613249876 98761324 9876</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>correct output</th></tr>
+            <tr><td>
+              <samp>&#960;</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+            <tr><th>user output</th></tr>
+            <tr><td>
+              <samp>-1</samp>
+              <div class="samp-actions"><a class="view" href="">view</a> <a class="save" href="">save</a></div>
+            </td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+</html>

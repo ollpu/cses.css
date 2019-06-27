@@ -23,6 +23,13 @@ td, th {
   padding: 0.06em 0.4em;
 }
 
+caption, .caption {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.17em;
+  margin: 0.6em 0 0.4em 0;
+}
+
 hr {
   border: none;
   border-top: 1px solid $border-col;
@@ -95,6 +102,50 @@ code {
   }
 }
 
+.summary-table {
+  td, th {
+    border-style: none;
+  }
+  tr {
+    border-top: none;
+    border-bottom-color: $light-border-col;
+    background-color: initial;
+  }
+}
+.left-align {
+  text-align: left;
+  th {
+    text-align: left;
+  }
+}
+.narrow {
+  width: 100%;
+  max-width: $narrow-content-width;
+}
+.wide {
+  width: 100%;
+  max-width: $default-content-width;
+}
+
+.closeable {
+  &.closed {
+    > tbody, > thead, > tfoot, > div {
+      display: none;
+    } 
+    > .close-trigger:after {
+      content: '\f0d7'; // "caret-down"
+    }
+  }
+}
+.close-trigger {
+  cursor: pointer;
+  &:after {
+    @include fontawesome();
+    content: '\f0d8'; // "caret-up"
+    margin-left: 0.4em;
+    color: $light-border-col;
+  }
+}
 
 input[type="submit"], button {
   background: $bgcol;

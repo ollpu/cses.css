@@ -66,6 +66,7 @@ body {
 }
 .title-block {
   overflow: none;
+  border-bottom: 1px solid $border-col;
   > h1 {
     padding: 0.6em 2*$default-side-padding;
     margin: 0;
@@ -74,8 +75,8 @@ body {
 .sidebar {
   display: table-cell;
   border-right: 1px solid black;
-  width: 15rem;
-  max-width: 16rem;
+  width: $sidebar-width;
+  max-width: 1.05*$sidebar-width;
   overflow-x: hidden;
   padding: $default-side-padding;
   box-sizing: border-box;
@@ -106,9 +107,10 @@ body {
 .content {
   padding: $default-side-padding;
 }
-body.with-sidebar {
+.with-sidebar {
   .skeleton {
     display: table;
+    table-layout: fixed;
   }
   .navigation, .content-wrapper {
     display: table-row;
@@ -153,7 +155,6 @@ body.with-sidebar {
   
   &.page-chooser {
     padding: 2*$nav-spacing-vert $default-side-padding;
-    border-bottom: 1px solid $border-col;
     clear: both;
   }
 }
@@ -168,6 +169,17 @@ body.with-sidebar {
     opacity: 1;
     pointer-events: all;
   }
+  // disable table layout
+  .with-sidebar {
+    .skeleton, .navigation, .content-wrapper, .title-block, .content {
+      display: block;
+    }
+  }
+  
+  .content {
+    overflow-x: auto;
+  }
+  
   .sidebar {
     border-right: none;
   }

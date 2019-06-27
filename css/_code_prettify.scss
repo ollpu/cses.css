@@ -1,0 +1,35 @@
+div.linenums {
+  counter-reset: linenums;
+  border-collapse: collapse;
+  font-size: inherit;
+  empty-cells: show;
+  color: gray;
+  
+  > div {
+    display: table-row;
+    &:before {
+      counter-increment: linenums;
+      content: counter(linenums);
+      display: table-cell;
+      text-align: right;
+      padding: 0 5px;
+      border-right: 1px solid gray;
+      margin-right: 5px;
+      background-color: #eee;
+      display: table-cell;
+    }
+    > span:first-child {
+      padding-left: 4px;
+      display: inline-block;
+    }
+  }
+}
+
+pre.prettyprint.linenums {
+  padding: 0 2px 0 0;
+}
+
+pre.resizeable {
+  resize: vertical;
+}
+

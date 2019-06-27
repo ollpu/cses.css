@@ -68,24 +68,18 @@
     }
   }
 }
-.sidebar > a > .task-score {
-  float: right;
-  flex-shrink: 0;
-  font-size: 0.75rem;
-  width: 2.5em;
-  font-weight: normal;
-  color: $text-col;
-  border: 1px solid opacify(black, 0.5);
-}
 
 .task-score {
   text-align: center;
-  background-color: task-score-bg-col(initial);
-  &.full { background-color: task-score-bg-col(full); }
-  &.zero { background-color: task-score-bg-col(zero); }
-  &.partial { background-color: task-score-bg-col(partial); }
-  &.busted { background-color: task-score-bg-col(busted); }
-  &.pending { background-color: task-score-bg-col(pending); }
+  @each $type, $col in $task-score-bg-cols {
+    @if $type == 'initial' {
+      background-color: $col;
+    } @else {
+      &.#{$type} {
+        background-color: $col;
+      }
+    }
+  }
   &.icon {
     &:before {
       @include fontawesome();
@@ -96,6 +90,52 @@
     &.busted:before { content: '\f714'; } // "skull-crossbones"
     &.pending:before { content: '\f059'; font-weight: 400; } // "question-circle"
   }
+}
+
+.sidebar > a > .task-score {
+  float: right;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  width: 2.5em;
+  font-weight: normal;
+  color: $text-col;
+  border: 1px solid opacify(black, 0.5);
+}
+
+.inline-score {
+  display: inline-block;
+  min-width: 5em;
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+.verdict {
+  @each $type, $col in $verdict-bg-cols {
+    &.#{$type} {
+      background-color: $col;
+    }
+  }
+}
+
+.samp-actions {
+  float: right;
+  > a {
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+    padding: 0.3rem 0.1rem 0.2rem 0.1rem;
+    color: $light-border-col;
+    &:before {
+      @include fontawesome();
+      font-size: 1.1rem;
+    }
+    &:hover {
+      color: $border-col;
+    }
+  }
+  > .view:before { content: '\f06e'; } // "eye"
+  > .save:before { content: '\f56d'; } // "file-download"
+  > .copy:before { content: '\f0c5'; } // "copy"
 }
 
 .contest-time {
@@ -191,7 +231,7 @@
   }
   col.task {
     width: 3.5em;
-    background-color: task-score-bg-col(icpc-initial);
+    background-color: icpc-task-bg-col(initial);
   }
   img {
     width: 2.5em;
@@ -218,14 +258,13 @@
   thead tr {
     height: 2em;
   }
-  .solved {
-    background-color: task-score-bg-col(icpc-solved);
-  }
-  .failed {
-    background-color: task-score-bg-col(icpc-failed);
-  }
-  .solved-first {
-    background-color: task-score-bg-col(icpc-first);
+  
+  @each $type, $col in $icpc-task-bg-cols {
+    @if $type != 'initial' {
+      .#{$type} {
+        background-color: $col;
+      }
+    }
   }
 }
 

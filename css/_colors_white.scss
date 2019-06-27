@@ -15,24 +15,36 @@ $nav-item-current-text-col: black;
 $nav-item-hover-col: darken(white, 8%);
 $nav-item-active-col: darken(white, 16%);
 
-$fancy-link-color: $nav-item-text-col;
-$visited-fancy-link-color: #03002c;
-
+$task-score-bg-cols: (
+  initial: #c8c8c8,
+  full:    #6ff079,
+  zero:    #f06f6f,
+  partial: #f0f36a,
+  busted:  #7e7e7e,
+  pending: #9a9ef2,
+);
+$icpc-task-bg-cols: (
+  initial: #eaeaea,
+  solved:  #84f38d,
+  failed:  #f38484,
+  first:   #16b923,
+);
+$verdict-bg-cols: (
+  unknown: map-get($task-score-bg-cols, initial),
+  ac: #8ee995,
+  wa: #e98e8e,
+  // other error colors not currently used
+  tle: #c78ee9,
+  rte: #e9ae8e,
+  mle: #e9e58e,
+);
 @function task-score-bg-col($type) {
-  @return map-get((
-    initial: #c8c8c8,
-    full:    #6ff079,
-    zero:    #f06f6f,
-    partial: #f0f36a,
-    busted:  #7e7e7e,
-    pending: #9a9ef2,
-      
-    icpc-initial: #eaeaea,
-    icpc-solved:  #84f38d,
-    icpc-failed:  #f38484,
-    icpc-first:   #16b923,
-  ), $type);
+  @return map-get($task-score-bg-cols, $type);
 }
+@function icpc-task-bg-col($type) {
+  @return map-get($icpc-task-bg-cols, $type);
+}
+
 
 $box-colors: (
   #8EF39A, #94B5EC, #FFD996, #FF9B96,
