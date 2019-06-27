@@ -26,8 +26,8 @@ td, th {
 caption, .caption {
   text-align: left;
   font-weight: bold;
-  font-size: 1.17em;
-  margin: 0.6em 0 0.4em 0;
+  font-size: 1.2em;
+  margin: 0.8em 0 0.4em 0;
 }
 
 hr {
@@ -35,7 +35,7 @@ hr {
   border-top: 1px solid $border-col;
 }
 
-pre {
+pre, samp {
   font-family: monospace;
   font-size: 0.875rem;
   overflow-x: auto;
@@ -91,6 +91,9 @@ code {
 }
 .details-col {
   width: 1em;
+}
+.small-col {
+  width: 0;
 }
 .details-link {
   font-size: 0;
