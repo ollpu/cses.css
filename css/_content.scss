@@ -40,23 +40,7 @@ pre, samp {
   font-size: 0.875rem;
   overflow-x: auto;
 }
-.io-example {
-  border: 1px solid $border-col;
-  background-color: $secondary-bgcol;
-  padding: 0.5rem;
-  @include light-shadow();
-  border-radius: 3px;
-  pre {
-    white-space: pre-wrap;
-    margin: 0.3rem 0 0.5rem;
-  }
-  h5 {
-    user-select: none;
-    margin: 0;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-  }
-}
+
 code {
   font-family: monospace;
   font-size: 0.875rem;
