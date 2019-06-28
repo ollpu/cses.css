@@ -33,7 +33,7 @@ $verdict-bg-cols: (
   unknown: map-get($task-score-bg-cols, initial),
   ac: #8ee995,
   wa: #e98e8e,
-  // other error colors not currently used
+  // other error colors might not be used (too colorful?)
   tle: #c78ee9,
   rte: #e9ae8e,
   mle: #e9e58e,
