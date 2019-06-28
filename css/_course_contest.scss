@@ -181,14 +181,14 @@
 
 .scoreboard-wrapper {
   width: 100%;
-  padding: $default-side-padding;
   box-sizing: border-box;
-  position: absolute;
-  left: 0;
   overflow-x: auto;
+  text-align: center;
 }
 .scoreboard {
-  margin: 0 auto;
+  display: inline-block;
+  //margin: 0 auto;
+  margin: $default-side-padding;
   a {
     color: $text-col;
   }
@@ -214,6 +214,7 @@
   }
   col.task {
     width: 3.5em;
+    min-width: 3em;
   }
   td {
     text-align: center;
@@ -226,12 +227,14 @@
 .scoreboard.icpc {
   col.name {
     width: 10em;
+    min-width: 8em;
   }
   col.time {
     border-right: 2px solid $border-col;
   }
   col.task {
     width: 3.5em;
+    min-width: 3em;
     background-color: icpc-task-bg-col(initial);
   }
   img {

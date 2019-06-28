@@ -24,10 +24,10 @@ $task-score-bg-cols: (
   pending: #9a9ef2,
 );
 $icpc-task-bg-cols: (
-  initial: #eaeaea,
-  solved:  #84f38d,
-  failed:  #f38484,
-  first:   #16b923,
+  initial:      #eaeaea,
+  solved:       #84f38d,
+  failed:       #f38484,
+  solved-first: #16b923,
 );
 $verdict-bg-cols: (
   unknown: map-get($task-score-bg-cols, initial),
