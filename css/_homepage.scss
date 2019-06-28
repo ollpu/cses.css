@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
+  margin: 0 (-$default-side-padding);
   > div {
     width: calc(50% - #{$default-side-padding/2});
     box-sizing: border-box;

@@ -68,7 +68,7 @@ body {
   overflow: none;
   border-bottom: 1px solid $border-col;
   > h1 {
-    padding: 0.6em 2*$default-side-padding;
+    padding: 0.6em $default-side-padding;
     margin: 0;
   }
 }
@@ -154,7 +154,7 @@ body {
   }
   
   &.page-chooser {
-    padding: 2*$nav-spacing-vert $default-side-padding;
+    padding: 2*$nav-spacing-vert 0;
     clear: both;
   }
 }
