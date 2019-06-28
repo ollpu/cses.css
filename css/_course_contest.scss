@@ -187,7 +187,6 @@
 }
 .scoreboard {
   display: inline-block;
-  //margin: 0 auto;
   margin: $default-side-padding;
   a {
     color: $text-col;
@@ -203,6 +202,9 @@
     white-space: nowrap;
     max-width: 14em;
   }
+}
+.unofficial-contestant {
+  opacity: 0.6;
 }
 .scoreboard.ioi {
   col.name {
