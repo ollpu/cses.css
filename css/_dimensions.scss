@@ -1,6 +1,6 @@
 
 $default-width: 60rem;
-$default-side-padding: 0.5rem;
+$default-side-padding: 0.6rem;
 
 // For content elements
 $default-content-width: 40rem;
@@ -15,7 +15,7 @@ $sidebar-width: 15rem;
 $light-shadow-size-base: 0.05rem;
 
 $nav-spacing-vert:  0.19rem;
-$nav-spacing-horiz: 0.5rem;
+$nav-spacing-horiz: $default-side-padding;
 
 $box-title-spacing: $default-side-padding/2;
 

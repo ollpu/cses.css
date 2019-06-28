@@ -1,9 +1,9 @@
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: verdana, sans-serif;
-    overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+  font-family: verdana, sans-serif;
+  overflow-y: scroll;
 }
 
 .header {
@@ -68,6 +68,7 @@ body {
   overflow: none;
   border-bottom: 1px solid $border-col;
   > h1 {
+    font-size: 1.8rem;
     padding: 0.6em $default-side-padding;
     margin: 0;
   }
