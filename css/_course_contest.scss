@@ -140,8 +140,11 @@
 
 .contest-time {
   list-style-type: none;
-  margin: 2*$default-side-padding;
-  margin: $default-side-padding 2*$default-side-padding $default-side-padding/2 2*$default-side-padding;
+  margin: 
+    $default-side-padding/2
+    $default-side-padding
+    $default-side-padding/2
+    2*$default-side-padding;
   padding: 0;
   font-size: 1rem;
   display: table;
@@ -162,6 +165,7 @@
 @include mobile {
   .contest-time {
     font-size: 0.8rem;
+    margin-bottom: -$default-side-padding;
   }
   .title-block h1 {
     clear: both;
