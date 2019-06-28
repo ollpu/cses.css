@@ -43,9 +43,15 @@
   $icon-size: 0.8;
   $details-size: 0.8;
   .task-score {
+    // for compatability
     float: right;
     clear: right;
     text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     width: 5rem;
     margin-left: .4rem;
     &.icon {
@@ -53,12 +59,7 @@
       line-height: 1/$icon-size * $item-line-height;
     }
   }
-  $headless-item-height: (1+$details-size)*$item-line-height;
   &.headless .task-score {
-    line-height: $headless-item-height;
-    &.icon {
-      line-height: 1/$icon-size*$headless-item-height;
-    }
   }
   .details {
     font-size: $details-size * 1em;
