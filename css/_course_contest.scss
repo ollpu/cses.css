@@ -128,7 +128,7 @@
     font-size: 0;
     text-decoration: none;
     padding: 0.3rem 0.1rem 0.2rem 0.1rem;
-    color: $light-border-col;
+    color: $mid-border-col;
     &:before {
       @include fontawesome();
       font-size: 1.1rem;
