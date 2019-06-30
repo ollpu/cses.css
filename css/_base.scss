@@ -2,8 +2,11 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: verdana, sans-serif;
   overflow-y: scroll;
+  
+  font-family: verdana, sans-serif;
+  background-color: $bgcol;
+  color: $text-col;
 }
 
 .header {
@@ -75,7 +78,7 @@ body {
 }
 .sidebar {
   display: table-cell;
-  border-right: 1px solid black;
+  border-right: 1px solid $border-col;
   width: $sidebar-width;
   max-width: 1.05*$sidebar-width;
   overflow-x: hidden;

@@ -2,8 +2,8 @@ div.linenums {
   counter-reset: linenums;
   border-collapse: collapse;
   font-size: inherit;
+  display: table;
   empty-cells: show;
-  color: gray;
   
   > div {
     display: table-row;
@@ -13,9 +13,10 @@ div.linenums {
       display: table-cell;
       text-align: right;
       padding: 0 5px;
-      border-right: 1px solid gray;
+      border-right: 1px solid $light-border-col;
+      color: $light-border-col;
       margin-right: 5px;
-      background-color: #eee;
+      background-color: $secondary-bgcol;
       display: table-cell;
     }
     > span:first-child {
@@ -25,8 +26,11 @@ div.linenums {
   }
 }
 
-pre.prettyprint.linenums {
-  padding: 0 2px 0 0;
+pre.prettyprint {
+  border: 1px solid $light-border-col;
+  &.linenums {
+    padding: 0 2px 0 0;
+  }
 }
 
 pre.resizeable {

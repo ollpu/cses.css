@@ -1,0 +1,27 @@
+.pln {
+  color: white;
+}
+@media screen{
+  .str {color: #96ff96;}
+  .kwd {color: #9c9cff;}
+  .com {color: #ff6868;}
+  .typ {color: #ff70ff;}
+  .lit {color: #29ffff;}
+  .pun,.opn,.clo {color: #fffeaf;}
+  .tag {color: #9c9cff;}
+  .atn {color: #ff70ff;}
+  .atv {color: #96ff96;}
+  .dec,.var {color: #ff70ff;}
+  .fun {color: red;}
+}
+@media print,projection{
+  .str {color: #060}
+  .kwd {color: #006;font-weight:bold}
+  .com {color: #600;font-style:italic}
+  .typ {color: #404;font-weight:bold}
+  .lit {color: #044}
+  .pun,.opn,.clo {color: #440}
+  .tag {color: #006;font-weight:bold}
+  .atn {color: #404}
+  .atv {color: #060}
+}

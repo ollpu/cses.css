@@ -2,7 +2,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/cses.css">
+  <link rel="stylesheet" type="text/css" href="/cses.css" id="styles">
+  <meta name="theme-color" content="white" id="theme-color">
+  <script>
+    // Theme selection will be done server-side
+    var theme = sessionStorage.getItem("theme");
+    if (!theme) theme = "white";
+    function apply_theme() {
+      var cssf = {"white": "/cses.css", "dark": "/cses-dark.css"};
+      var tcol = {"white": "white", "dark": "#292929"};
+      document.getElementById("styles").setAttribute("href", cssf[theme]);
+      document.getElementById("theme-color").setAttribute("content", tcol[theme]);
+    }
+
+    apply_theme();
+    function toggle_theme() {
+      if (theme == "white") theme = "dark";
+      else theme = "white";
+      sessionStorage.setItem("theme", theme);
+      apply_theme();
+      return false;
+    }
+  </script>
   <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
   <title>CSES - ICPC Scoreboard</title>
 </head>
@@ -18,7 +39,7 @@
       <div class="controls">
         <a class="account" href="/account">demotili</a>
         <span>&mdash;</span>
-        <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+        <a href title="Dark mode" onclick="return toggle_theme()"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
         <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
       </div>
     </div>
@@ -78,45 +99,5 @@
 <tr><td>14</td><td><a href>Team Lewd</a></td><td></td><td>1</td><td>126</td><td class="failed"><a href="/251/result/160053">1<br>--</a></td><td class="failed"><a href="/251/result/160115">2<br>--</a></td><td><a href="/251/result/"><br></a></td><td class="failed"><a href="/251/result/160080">5<br>--</a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td><td class="solved"><a href="/251/result/160069">1<br>126</a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td><td><a href="/251/result/"><br></a></td></tr>
 </tbody></table>
 </div>
-<script>
-function ccols(param) {
-param = parseInt(param)/100;
-var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
-const mult = 0.696, offs = 0.189;
-cells.forEach(function(cell) {
-  if (cell.innerText == "-") return;
-  var x = parseInt(cell.innerText);
-  if (cell.classList.contains("contest-score")) {
-    x /= 700;
-  } else {
-    x /= 100;
-  }
-  var r, g, b=0;
-  if (x < 0.5) {
-    r = 1;
-    g = Math.pow(2*x, param);
-    b = 0;
-  } else {
-    r = Math.pow(2-2*x, param);
-    g = 1;
-    b = 0;
-  }
-  r = offs+r*mult;
-  g = offs+g*mult;
-  b = offs+b*mult;
-  r = Math.round(Math.sqrt(r)*255);
-  g = Math.round(Math.sqrt(g)*255);
-  b = Math.round(Math.sqrt(b)*255);
-  cell.style.background = "rgba("+r+","+g+","+b+")";
-});
-}
-var slider = document.getElementById("cslider");
-var value = document.getElementById("cvalue");
-ccols(slider.value);
-slider.oninput = function() {
-value.innerText = slider.value;
-ccols(slider.value);
-}
-</script>
 </body>
 </html>

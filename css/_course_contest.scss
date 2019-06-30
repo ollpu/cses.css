@@ -68,6 +68,9 @@
   }
 }
 
+.task-score, .contest-score {
+  color: $task-score-text-col;
+}
 .task-score {
   text-align: center;
   @each $type, $col in $task-score-bg-cols {
@@ -98,8 +101,8 @@
   width: 2.5em;
   margin-left: 0.2em;
   font-weight: normal;
-  color: $text-col;
-  border: 1px solid opacify(black, 0.5);
+  color: $task-score-text-col;
+  border: 1px solid $light-border-col;
 }
 
 .inline-score {
@@ -110,6 +113,7 @@
 }
 
 .verdict {
+  color: $task-score-text-col;
   @each $type, $col in $verdict-bg-cols {
     &.#{$type} {
       background-color: $col;
@@ -192,7 +196,7 @@
   display: inline-block;
   margin: $default-side-padding;
   a {
-    color: $text-col;
+    color: inherit;
   }
   > tbody > tr {
     background-color: initial;
@@ -245,6 +249,11 @@
   img {
     width: 2.5em;
     max-height: 2.5em;
+    @if $bgcol != white {
+      background-color: white;
+      border-radius: 0.3em;
+    }
+    padding: 0.3em;
   }
   td {
     &:nth-child(1), &:nth-child(4), &:nth-child(5) {
@@ -255,7 +264,7 @@
     }
     &:nth-child(3) {
       border-left: none;
-      padding-right: 0.5em;
+      padding: 0 0.5em;
     }
   }
   th {

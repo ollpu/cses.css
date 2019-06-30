@@ -1,0 +1,58 @@
+
+$bgcol: #181818;
+$secondary-bgcol: #454545;
+$text-col: white;
+
+$override-anchor-cols: true;
+$anchor-link-col: #5cafff;
+$anchor-visited-col: #93c3f2;
+$anchor-hover-col: white;
+$anchor-active-col: darken(white, 20%);
+
+$header-color: #292929;
+$header-text-color: white;
+$header-shadow-darkness: 0.4;
+
+$border-col: lighten(black, 80%);
+$light-border-col: lighten(black, 50%);
+
+$nav-item-text-col: #5cafff;
+$nav-item-current-text-col: $text-col;
+$nav-item-hover-col: lighten($bgcol, 15%);
+$nav-item-active-col: lighten($bgcol, 30%);
+
+$task-score-text-col: black;
+$task-score-bg-cols: (
+  initial: #848484,
+  full:    #48dd48,
+  zero:    #dd4848,
+  partial: #dddd48,
+  busted:  #808080,
+  pending: #656ac9,
+);
+$icpc-task-bg-cols: (
+  initial:      #3b3b3b,
+  solved:       #28a233,
+  failed:       #a13535,
+  solved-first: #007d0a,
+);
+$verdict-bg-cols: (
+  unknown: map-get($task-score-bg-cols, initial),
+  ac: #48bd48,
+  wa: #d75b5b,
+  // other error colors might not be used (too colorful?)
+  tle: #a366c9,
+  rte: #d77540,
+  mle: #c3bd43,
+);
+@function task-score-bg-col($type) {
+  @return map-get($task-score-bg-cols, $type);
+}
+@function icpc-task-bg-col($type) {
+  @return map-get($icpc-task-bg-cols, $type);
+}
+
+
+$box-colors: (
+  #417748, #416c77, #767741, #77414f,
+);

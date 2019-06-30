@@ -2,7 +2,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/cses.css">
+  <link rel="stylesheet" type="text/css" href="/cses.css" id="styles">
+  <meta name="theme-color" content="white" id="theme-color">
+  <script>
+    // Theme selection will be done server-side
+    var theme = sessionStorage.getItem("theme");
+    if (!theme) theme = "white";
+    function apply_theme() {
+      var cssf = {"white": "/cses.css", "dark": "/cses-dark.css"};
+      var tcol = {"white": "white", "dark": "#292929"};
+      document.getElementById("styles").setAttribute("href", cssf[theme]);
+      document.getElementById("theme-color").setAttribute("content", tcol[theme]);
+    }
+
+    apply_theme();
+    function toggle_theme() {
+      if (theme == "white") theme = "dark";
+      else theme = "white";
+      sessionStorage.setItem("theme", theme);
+      apply_theme();
+      return false;
+    }
+  </script>
   <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
   <title>CSES</title>
 </head>
@@ -18,7 +39,7 @@
       <div class="controls">
         <a class="account" href="/account">demotili</a>
         <span>&mdash;</span>
-        <a href title="Dark mode"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+        <a href title="Dark mode" onclick="return toggle_theme()"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
         <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
       </div>
     </div>

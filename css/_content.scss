@@ -1,3 +1,12 @@
+a {
+  @if $override-anchor-cols {
+    &:link { color: $anchor-link-col; }
+    &:visited { color: $anchor-visited-col; }
+    &:hover { color: $anchor-hover-col; }
+    &:active { color: $anchor-active-col; }
+  }
+}
+
 table {
   border-collapse: collapse;
 }
@@ -12,7 +21,7 @@ tbody > tr:nth-child(even) {
   background-color: $secondary-bgcol;
 }
 
-thead > tr {
+thead {
   border-bottom: 2px solid $border-col;
 }
 
@@ -47,22 +56,18 @@ code {
 }
 
 .simple-form {
-  display: table;
-  max-width: 32rem;
+  max-width: $form-width;
   label {
-    display: table-row;
+    display: block;
   }
-  span, input, select {
-    display: table-cell;
-  }
-  span {
-    width: 10rem;
-    text-align: right;
-    padding-right: 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 0;
-  }
-  input, select {
+  > input, > select {
+    display: block;
     width: 100%;
+    margin: 0.3em 0 0.6em;
+  }
+  > input[type=submit], button {
+    width: initial;
+    margin: 0.6em 0 0.6em;
   }
 }
 

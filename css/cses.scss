@@ -1,12 +1,14 @@
 
 @import 'dimensions';
-@import 'colors_white';
+@import 'colors'; // from theme
 @import 'mixins';
 
-@import 'base';
+// Order is important: a:link etc colors conflict with some base styles
 @import 'content';
+@import 'base';
 
 @import 'homepage';
+@import 'prettify_colors'; // from theme
 @import 'course_contest';
 @import 'code_prettify';
 

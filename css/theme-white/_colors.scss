@@ -3,6 +3,8 @@ $bgcol: white;
 $secondary-bgcol: #eee;
 $text-col: black;
 
+$override-anchor-cols: false;
+
 $header-color: #292929;
 $header-text-color: white;
 $header-shadow-darkness: 0.4;
@@ -15,6 +17,7 @@ $nav-item-current-text-col: black;
 $nav-item-hover-col: darken(white, 8%);
 $nav-item-active-col: darken(white, 16%);
 
+$task-score-text-col: $text-col;
 $task-score-bg-cols: (
   initial: #c8c8c8,
   full:    #6ff079,
