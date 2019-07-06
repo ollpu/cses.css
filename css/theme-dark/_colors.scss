@@ -16,6 +16,7 @@ $header-shadow-darkness: 0.4;
 $border-col: lighten(black, 60%);
 $mid-border-col: lighten(black, 50%);
 $light-border-col: lighten(black, 30%);
+$colored-bg-border-col: scale-color(white, $alpha: -40%);
 
 $nav-item-text-col: #5cafff;
 $nav-item-current-text-col: $text-col;
