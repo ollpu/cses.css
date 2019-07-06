@@ -150,7 +150,6 @@
   font-size: 0.9rem;
   display: table;
   font-weight: normal;
-  // float: right;
   > li {
     display: table-row;
   }
@@ -162,16 +161,6 @@
     display: table-cell;
     text-align: right;
   }
-}
-
-
-
-.task-limits {
-  float: right;
-  margin: 0.6rem 0.4rem;
-}
-.task-limits th {
-  text-align: left;
 }
 
 .scoreboard-wrapper {

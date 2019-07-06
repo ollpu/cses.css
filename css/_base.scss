@@ -186,7 +186,7 @@ body {
   // the menu is open. Header controls are still made visible in this state.
   body.menu-open {
     &.with-sidebar {
-      > .title-block, > .content {
+      .title-block, .content {
         display: none;
       }
     }
