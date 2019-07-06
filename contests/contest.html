@@ -27,15 +27,15 @@
   <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
   <title>CSES - Contest page</title>
 </head>
-<body>
+<body class="with-sidebar">
   <div class="header">
     <div>
-      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
-        <i class="fas fa-bars"></i>
-      </a>
       <div class="logo">
           <a href="/"><img src="/logo.png" alt="CSES"></a>
       </div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+        <i class="fas fa-bars"></i>
+      </a>
       <div class="controls">
         <a class="account" href="/account">demotili</a>
         <span>&mdash;</span>
@@ -48,16 +48,18 @@
   
   <div class="navigation">
     <div class="title-block">
-      <ul class="contest-time">
-        <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
-        <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
-        <li><b>Time left:</b> <span>4:48:12</span></li>
-      </ul>
       <h1>Example Contest</h1>
       <ul class="nav page-chooser">
         <li><a class="current" href="contest.html">Tasks</a></li>
         <li><a href="scoreboard.html">Scoreboard</a></li>
         <li><a href="">Statistics</a></li>
+      </ul>
+    </div>
+    <div class="sidebar">
+      <ul class="contest-time">
+        <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
+        <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
+        <li><b>Time left:</b> <span>4:48:12</span></li>
       </ul>
     </div>
   </div>
@@ -79,68 +81,69 @@
       </ul>
       <h2 id="tasks2">Tasks (headless)</h2>
       <ul class="task-list contest headless">
-          <li class="task">
-            <b>A</b>
-            <div>
-              Example contest task
-              <div class="details">
-                <span>1.00 s</span>
-                <span>150 MB</span>
-                <a href="submit.html">Submit</a>
-              </div>
+        <li class="task">
+          <b>A</b>
+          <div>
+            Example contest task
+            <div class="details">
+              <span>1.00 s</span>
+              <span>150 MB</span>
+              <a href="submit.html">Submit</a>
             </div>
-            <span class="task-score full">100</span>
-          </li>
-          <li class="task">
-            <b>B</b>
-            <div>
-              Algoritmi
-              <div class="details">
-                <span>1.50 s</span>
-                <span>512 MB</span>
-                <a href="submit.html">Submit</a>
-              </div>
+          </div>
+          <span class="task-score full">100</span>
+        </li>
+        <li class="task">
+          <b>B</b>
+          <div>
+            Algoritmi
+            <div class="details">
+              <span>1.50 s</span>
+              <span>512 MB</span>
+              <a href="submit.html">Submit</a>
             </div>
-            <span class="task-score zero">0</span>
-          </li>
-          <li class="task">
-            <b>C</b>
-            <div>
-              Bittijonot
-              <div class="details">
-                <span>0.05 s</span>
-                <span>1024 MB</span>
-                <a href="submit.html">Submit</a>
-              </div>
+          </div>
+          <span class="task-score zero">0</span>
+        </li>
+        <li class="task">
+          <b>C</b>
+          <div>
+            Bittijonot
+            <div class="details">
+              <span>0.05 s</span>
+              <span>1024 MB</span>
+              <a href="submit.html">Submit</a>
             </div>
-            <span class="task-score partial">34</span>
-          </li>
-          <li class="task">
-            <b>D</b>
-            <div>
-              Tilavuus
-              <div class="details">
-                <span>35.00 s</span>
-                <span>24 MB</span>
-                <a href="submit.html">Submit</a>
-              </div>
-            </div> 
-            <span class="task-score">-</span>
-          </li>
-          <li class="task">
-            <b>E</b>
-            <div>
-              Viikonpäivä
-              <div class="details">
-                <span>1.00 s</span>
-                <span>128 MB</span>
-                <a href="submit.html">Submit</a>
-              </div>
+          </div>
+          <span class="task-score partial">34</span>
+        </li>
+        <li class="task">
+          <b>D</b>
+          <div>
+            Tilavuus
+            <div class="details">
+              <span>35.00 s</span>
+              <span>24 MB</span>
+              <a href="submit.html">Submit</a>
             </div>
-            <span class="task-score full">100</span>
-          </li>
+          </div> 
+          <span class="task-score">-</span>
+        </li>
+        <li class="task">
+          <b>E</b>
+          <div>
+            Viikonpäivä
+            <div class="details">
+              <span>1.00 s</span>
+              <span>128 MB</span>
+              <a href="submit.html">Submit</a>
+            </div>
+          </div>
+          <span class="task-score full">100</span>
+        </li>
       </ul>
     </div>
+    <div class="sidebar nav"></div>
   </div>
   
   </div>

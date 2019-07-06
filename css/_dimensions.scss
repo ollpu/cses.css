@@ -2,16 +2,17 @@
 $default-width: 60rem;
 $default-side-padding: 0.6rem;
 
-// For content elements
-$default-content-width: 40rem;
-$narrow-content-width: 30rem;
-$form-width: 20rem;
-
 $header-height: 2.6rem;
 $header-padding: 0.3rem;
 $header-shadow: 0.05rem;
 
-$sidebar-width: 15rem;
+$sidebar-width: 18rem;
+
+// For content elements
+$default-content-width: $default-width - 2*$default-side-padding - $sidebar-width;
+$narrow-content-width: 30rem;
+$form-width: 20rem;
+
 
 $light-shadow-size-base: 0.05rem;
 
@@ -20,4 +21,4 @@ $nav-spacing-horiz: $default-side-padding;
 
 $box-title-spacing: $default-side-padding/2;
 
-$responsive-mobile-breakoff: 45em;
+$responsive-mobile-breakoff: 50em;

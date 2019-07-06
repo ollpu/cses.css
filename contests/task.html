@@ -30,12 +30,12 @@
 <body class="with-sidebar">
   <div class="header">
     <div>
-      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
-        <i class="fas fa-bars"></i>
-      </a>
       <div class="logo">
           <a href="/"><img src="/logo.png" alt="CSES"></a>
       </div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+        <i class="fas fa-bars"></i>
+      </a>
       <div class="controls">
         <a class="account" href="/account">demotili</a>
         <span>&mdash;</span>
@@ -47,11 +47,6 @@
   <div class="skeleton">
   
   <div class="navigation">
-    <div class="sidebar">
-      <h3><a href="./contest.html">Example Contest</a></h3>
-      <b>Time left:</b> <span>4:48:12</span>
-    </div>
-    
     <div class="title-block">
       <h1>Example Contest Task</h1>
       
@@ -62,25 +57,18 @@
         <li><a href="">Analysis</a></li>
       </ul>
     </div>
+    
+    <div class="sidebar">
+      <h3><a href="./contest.html">Example Contest</a></h3>
+      <ul class="contest-time">
+        <li><b>Time left:</b> <span>4:48:12</span></li>
+      </ul>
+    </div>
   </div>
   
   <div class="content-wrapper">
-    <div class="nav sidebar">
-      <a class="current" href="task.html"><span><b>A</b> Example Contest Task</span> <span class="task-score full">100</span></a>
-      <a href><span><b>B</b> Algoritmi</span> <span class="task-score zero">0</span></a>
-      <a href><span><b>C</b> Bittijonot</span> <span class="task-score partial">34</span></a>
-      <a href><span><b>E</b> Tilavuus</span> <span class="task-score">-</span></a>
-      <a href><span><b>F</b> Viikonpäivä</span> <span class="task-score full">100</span></a>
-      <hr />
-      <h4>Submissions</h4>
-      <a href="result.html">2018-10-07 14:55:05 <span class="task-score full">100</span></a>
-      <a href="result.html">2018-10-06 14:23:46 <span class="task-score partial">56</span></a>
-      <a href="result.html">2018-10-03 08:12:32 <span class="task-score zero">0</span></a>
-      <hr />
-    </div>
-  
     <div class="content">
-      <table class="task-limits">
+      <table class="float left-align">
         <tr><th>Time limit:</th><td>1.00 s</td></tr>
         <tr><th>Memory limit:</th><td>150 MB</td></tr>
       </table>
@@ -106,7 +94,21 @@
           <div class="samp-actions"><a class="copy" href="">copy</a></div>
         </td></tr>
       </table>
-      </div>
+    </div>
+      
+    <div class="nav sidebar">
+      <a class="current" href="task.html"><span><b>A</b> Example Contest Task</span> <span class="task-score full">100</span></a>
+      <a href><span><b>B</b> Algoritmi</span> <span class="task-score zero">0</span></a>
+      <a href><span><b>C</b> Bittijonot</span> <span class="task-score partial">34</span></a>
+      <a href><span><b>E</b> Tilavuus</span> <span class="task-score">-</span></a>
+      <a href><span><b>F</b> Viikonpäivä</span> <span class="task-score full">100</span></a>
+      <hr />
+      <h4>Submissions</h4>
+      <a href="result.html">2018-10-07 14:55:05 <span class="task-score full">100</span></a>
+      <a href="result.html">2018-10-06 14:23:46 <span class="task-score partial">56</span></a>
+      <a href="result.html">2018-10-03 08:12:32 <span class="task-score zero">0</span></a>
+      <hr />
+    </div>
     </div>
   </div>
 

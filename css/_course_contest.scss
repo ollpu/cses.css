@@ -5,13 +5,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: $default-content-width;
-  border-top: 1px solid $border-col;
+  @extend .wide;
+  border-top: 1px solid $light-border-col;
   
   > li {
     display: flex;
     line-height: $item-line-height;
-    border-bottom: 1px solid $border-col;
+    border-bottom: 1px solid $light-border-col;
     overflow: hidden;
     &:hover {
       background-color: $nav-item-hover-col;
@@ -144,35 +144,23 @@
 
 .contest-time {
   list-style-type: none;
-  margin: 
-    $default-side-padding/2
-    $default-side-padding
-    $default-side-padding/2
-    2*$default-side-padding;
+  width: 100%;
+  margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: table;
   font-weight: normal;
-  float: right;
+  // float: right;
   > li {
     display: table-row;
   }
   b {
     display: table-cell;
-    text-align: right;
     padding-right: 0.5em;
   }
   span {
     display: table-cell;
-  }
-}
-@include mobile {
-  .contest-time {
-    font-size: 0.8rem;
-    margin-bottom: -$default-side-padding;
-  }
-  .title-block h1 {
-    clear: both;
+    text-align: right;
   }
 }
 

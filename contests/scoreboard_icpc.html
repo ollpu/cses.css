@@ -30,12 +30,12 @@
 <body>
   <div class="header">
     <div>
-      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
-        <i class="fas fa-bars"></i>
-      </a>
       <div class="logo">
           <a href="/"><img src="/logo.png" alt="CSES"></a>
       </div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open'); return false;">
+        <i class="fas fa-bars"></i>
+      </a>
       <div class="controls">
         <a class="account" href="/account">demotili</a>
         <span>&mdash;</span>
@@ -48,16 +48,18 @@
   
   <div class="navigation">
     <div class="title-block">
-      <ul class="contest-time">
-        <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
-        <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
-        <li><b>Time left:</b> <span>4:48:12</span></li>
-      </ul>
       <h1>Example Contest</h1>
       <ul class="nav page-chooser">
         <li><a href="contest.html">Tasks</a></li>
         <li><a class="current" href="scoreboard.html">Scoreboard</a></li>
         <li><a href="">Statistics</a></li>
+      </ul>
+    </div>
+    <div class="sidebar">
+      <ul class="contest-time">
+        <li><b>Start:</b> <span>2018-10-01 00:00:00</span></li>
+        <li><b>End:</b> <span>2018-10-15 00:00:00</span></li>
+        <li><b>Time left:</b> <span>4:48:12</span></li>
       </ul>
     </div>
   </div>

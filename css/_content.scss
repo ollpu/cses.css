@@ -72,9 +72,6 @@ code {
 }
 
 // Common table styles
-.full-width {
-  width: 100%;
-}
 .brief-col {
   min-width: 6em;
 }
@@ -91,6 +88,17 @@ code {
     font-size: 1.2rem;
     @include fontawesome();
     content: '\f101'; // "angle-double-right"
+  }
+}
+
+.float {
+  float: right;
+  margin: 0.4rem 0.6rem;
+}
+@media screen and (max-width: 25rem) {
+  .float {
+    float: none;
+    margin: 0.4rem auto;
   }
 }
 
@@ -117,6 +125,9 @@ code {
 .wide {
   width: 100%;
   max-width: $default-content-width;
+}
+.full-width {
+  width: 100%;
 }
 
 .closeable {
