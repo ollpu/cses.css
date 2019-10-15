@@ -60,6 +60,10 @@ body {
 .navigation, .content-wrapper {
   display: table-row;
 }
+.navigation a {
+  text-decoration: none;
+  color: $nav-item-text-col;
+}
 .navigation {
   > .sidebar {
     border-bottom: 1px solid $border-col;
@@ -68,19 +72,26 @@ body {
     > h3 {
       margin: 0 0 0.5em;
     }
-    a {
-      text-decoration: none;
-      color: $nav-item-text-col;
+    &:empty {
+      border-left: none;
     }
   }
 }
 .title-block {
   display: table-cell;
   border-bottom: 1px solid $border-col;
+  padding: 0 $default-side-padding;
+  > h3 {
+    padding: 0.4em 0;
+    margin: 0;
+  }
   > h1 {
     font-size: 1.8rem;
-    padding: 0.6em $default-side-padding;
+    padding: 0.6em 0;
     margin: 0;
+  }
+  > h3 + h1 {
+    padding-top: 0;
   }
 }
 .sidebar {
@@ -156,6 +167,7 @@ body {
   
   &.page-chooser {
     padding: 2*$nav-spacing-vert 0;
+    margin: 0 (-$default-side-padding);
   }
 }
 
@@ -180,7 +192,7 @@ body {
     width: 100%;
   }
   .title-block > h1 {
-    padding: 0.4em $default-side-padding;
+    padding: 0.4em 0;
   }
   // If body doesn't have .with-sidebar, keep the main content visible when
   // the menu is open. Header controls are still made visible in this state.
