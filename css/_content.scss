@@ -158,7 +158,7 @@ code {
     display: inline-block;
     text-decoration: none;
     outline: none;
-    padding: 0.1rem 0.2rem;
+    padding: 0 0.2rem;
     color: $light-border-col;
     &[href] {
       color: $nav-item-text-col;
