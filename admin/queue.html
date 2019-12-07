@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/cses.css" id="styles">
+  <meta name="theme-color" content="white" id="theme-color">
+  <script src="/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.min.css">
+  <title>CSES - Queue</title>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="logo">
+          <a href="/"><img src="/logo.png" alt="CSES"></a>
+      </div>
+      <a href class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="controls">
+        <a class="account" href="/account">demotili</a>
+        <span>&mdash;</span>
+        <a href title="Dark mode" onclick="return toggle_theme()"><i class="fas fa-adjust"></i><span>Dark mode</span></a>
+        <a href title="Log out"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="skeleton">
+  
+  <div class="navigation">
+    <div class="title-block">
+      <h1>Admin panel</h1>
+      
+      <ul class="nav page-chooser">
+        <li><a href="/">Courses</a></li>
+        <li><a href="/">Contests</a></li>
+        <li><a href="/">Tasks</a></li>
+        <li><a href="/">Hacks</a></li>
+        <li><a href="/">Misc</a></li>
+        <li><a class="current" href="/">Queue</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="content-wrapper">
+    <div class="content">
+    <p>Number of submissions: 101010</p>
+    <div class="pager">
+      <a class="prev">&lt;</a>
+      <a href class="current">1</a> <a href>2</a> <a href>3</a> ... <a href>9001</a> <a href>9002</a> <a href>9003</a>
+      <a href class="next">&gt;</a>
+    </div>
+    <table class="full-width">
+      <colgroup>
+        <col>
+        <col class="brief-col">
+        <col class="brief-col">
+        <col class="small-col">
+        <col class="brief-col">
+        <col class="brief-col">
+        <col class="details-col">
+      </colgroup>
+      <thead>
+        <tr><th>time</th><th>sender</th><th>task</th><th>lang</th><th>status</th><th>result</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2019-12-07 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon full"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-11-08 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-10-09 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>Python3</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-09-10 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-08-11 11:20:12</td><td><a href>demotili</a></td><td><a href="/courses/task.html">Example Course Task</a></td><td>C++</td><td>READY</td><td class="task-score icon full"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-07-12 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-06-13 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-05-14 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-04-15 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-03-16 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+        <tr><td>2019-02-17 11:20:12</td><td><a href>user</a></td><td><a href="/contests/task.html">Example Contest Task</a></td><td>C++</td><td>READY</td><td class="task-score icon zero"></td><td><a class="details-link" href>details</a></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  
+  </div>
+</body>
+</html>

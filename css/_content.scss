@@ -150,6 +150,47 @@ code {
   }
 }
 
+.pager {
+  text-align: center;
+  margin: 0.6em;
+  a {
+    vertical-align: middle;
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    padding: 0.1rem 0.2rem;
+    color: $light-border-col;
+    &[href] {
+      color: $nav-item-text-col;
+      &:hover {
+        background-color: $nav-item-hover-col;
+      }
+      &:active {
+        background-color: $nav-item-active-col;
+      }
+    }
+    &.current {
+      font-weight: bold;
+      color: $nav-item-current-text-col;
+    }
+  }
+  .prev, .next {
+    font-size: 0;
+    padding: 0.2rem 0.6rem;
+    margin: 0 0.6rem;
+    border-radius: 0.2rem;
+    &[href] {
+      color: $text-col;
+    }
+    &:before {
+      font-size: 1.4rem;
+      @include fontawesome();
+    }
+  }
+  .prev:before { content: '\f104'; } // "angle-left"
+  .next:before { content: '\f105'; } // "angle-right"
+}
+
 input[type="submit"], button {
   background: $bgcol;
   color: $text-col;
