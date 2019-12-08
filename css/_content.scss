@@ -102,6 +102,7 @@ code {
   }
 }
 
+// Lightweight table, e.g. a summary
 .summary-table {
   td, th {
     border-style: none;
@@ -112,12 +113,14 @@ code {
     background-color: initial;
   }
 }
+// Mixin class, mainly for .summary-table
 .left-align {
   text-align: left;
   th {
     text-align: left;
   }
 }
+
 .narrow {
   width: 100%;
   max-width: $narrow-content-width;
@@ -150,6 +153,7 @@ code {
   }
 }
 
+// Pagination selector
 .pager {
   text-align: center;
   margin: 0.6em;

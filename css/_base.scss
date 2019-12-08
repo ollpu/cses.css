@@ -50,6 +50,7 @@ body {
   display: none;
 }
 
+// .skeleton forms a table layout (CSS grid deemed not available enough for now)
 .skeleton {
   display: table;
   table-layout: fixed;
@@ -57,14 +58,15 @@ body {
   max-width: $default-width;
   margin: 0.5rem auto;
 }
+// .navigation and .content-wrapper are rows of the table
 .navigation, .content-wrapper {
   display: table-row;
 }
-.navigation a {
-  text-decoration: none;
-  color: $nav-item-text-col;
-}
 .navigation {
+  a {
+    text-decoration: none;
+    color: $nav-item-text-col;
+  }
   > .sidebar {
     border-bottom: 1px solid $border-col;
     vertical-align: bottom;
@@ -94,6 +96,7 @@ body {
     padding-top: 0;
   }
 }
+// The second cells on both rows are .sidebar
 .sidebar {
   display: table-cell;
   border-left: 1px solid $border-col;
@@ -135,8 +138,8 @@ body {
 }
 
 
-
 // Navigation buttons
+// Used in both the main navigation bar and sidebar link lists
 .nav {
   font-size: 0;
   list-style: none;

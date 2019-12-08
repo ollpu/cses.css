@@ -82,6 +82,7 @@
       }
     }
   }
+  // Use an icon if specified
   &.icon {
     &:before {
       @include fontawesome();
@@ -163,6 +164,7 @@
   }
 }
 
+// Scoreboards
 .scoreboard-wrapper {
   width: 100%;
   box-sizing: border-box;
