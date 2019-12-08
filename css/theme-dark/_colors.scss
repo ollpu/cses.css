@@ -23,13 +23,13 @@ $nav-item-current-text-col: $text-col;
 $nav-item-hover-col: lighten($bgcol, 15%);
 $nav-item-active-col: lighten($bgcol, 30%);
 
-$task-score-text-col: black;
+$task-score-text-col: $text-col;
 $task-score-bg-cols: (
-  initial: #848484,
-  full:    #48dd48,
-  zero:    #dd4848,
-  partial: #dddd48,
-  busted:  #808080,
+  initial: #3b3b3b,
+  full:    #28a136,
+  zero:    #a12836,
+  partial: #a1a136,
+  busted:  #000000,
   pending: #656ac9,
 );
 $icpc-task-bg-cols: (

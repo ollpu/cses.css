@@ -95,9 +95,9 @@
 function ccols(param) {
 param = parseInt(param)/100;
 var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
-var mult = 0.696, offs = 0.189;
+var mult = 0.696, offs = 0.189, blue_tweak = 0;
 if (theme == "dark") {
-    mult = 0.671; offs = 0.080;
+    mult = 0.375; offs = 0.025, blue_tweak = 0.020;
 }
 cells.forEach(function(cell) {
   if (cell.innerText == "-") return;
@@ -119,7 +119,7 @@ cells.forEach(function(cell) {
   }
   r = offs+r*mult;
   g = offs+g*mult;
-  b = offs+b*mult;
+  b = offs+b*mult+blue_tweak;
   r = Math.round(Math.sqrt(r)*255);
   g = Math.round(Math.sqrt(g)*255);
   b = Math.round(Math.sqrt(b)*255);
