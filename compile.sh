@@ -11,5 +11,5 @@ then
     find css/ -not -path '*/\.*' | entr -d bash -c "$CMD"
   done
 else
-  bash -c "$CMD"
+  eval "$CMD"
 fi
