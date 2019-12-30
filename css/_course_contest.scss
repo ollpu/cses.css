@@ -73,12 +73,17 @@
 }
 .task-score {
   text-align: center;
+  $col-property: background-color;
+  @if $score-colors-as-fg {
+    background-color: $score-default-bg;
+    $col-property: color;
+  }
   @each $type, $col in $task-score-bg-cols {
     @if $type == 'initial' {
-      background-color: $col;
+      #{$col-property}: $col;
     } @else {
       &.#{$type} {
-        background-color: $col;
+        #{$col-property}: $col;
       }
     }
   }
@@ -102,7 +107,9 @@
   width: 2.5em;
   margin-left: 0.2em;
   font-weight: normal;
-  color: $task-score-text-col;
+  @if not $score-colors-as-fg {
+    color: $task-score-text-col;
+  }
   border: 1px solid $light-border-col;
 }
 

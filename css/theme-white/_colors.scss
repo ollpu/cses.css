@@ -20,6 +20,7 @@ $nav-item-hover-col: darken(white, 8%);
 $nav-item-active-col: darken(white, 16%);
 
 $task-score-text-col: $text-col;
+$score-colors-as-fg: false;
 $task-score-bg-cols: (
   initial: #c8c8c8,
   full:    #6ff079,
