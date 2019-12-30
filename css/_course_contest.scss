@@ -122,9 +122,15 @@
 
 .verdict {
   color: $task-score-text-col;
+  $col-property: background-color;
+  @if $score-colors-as-fg {
+    // the background color mainly hinders legibility here
+    // background-color: $score-default-bg;
+    $col-property: color;
+  }
   @each $type, $col in $verdict-bg-cols {
     &.#{$type} {
-      background-color: $col;
+      #{$col-property}: $col;
     }
   }
 }

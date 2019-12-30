@@ -42,12 +42,12 @@ $icpc-task-bg-cols: (
 );
 $verdict-bg-cols: (
   unknown: map-get($task-score-bg-cols, initial),
-  ac: #48bd48,
-  wa: #d75b5b,
+  ac: #6ff079,
+  wa: #f06f6f,
   // other error colors might not be used (too colorful?)
-  tle: #a366c9,
-  rte: #d77540,
-  mle: #c3bd43,
+  tle: #ec6ff0,
+  rte: #f0b86f,
+  mle: #f0e86f,
 );
 @function task-score-bg-col($type) {
   @return map-get($task-score-bg-cols, $type);
