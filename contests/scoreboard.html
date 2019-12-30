@@ -95,7 +95,12 @@
 function ccols(param) {
 param = parseInt(param)/100;
 var cells = document.querySelectorAll(".scoreboard.ioi .task-score, .scoreboard.ioi .contest-score");
-var mult = 0.696, offs = 0.189, blue_tweak = 0;
+var hl_hex = 0xf0, bl_hex = 0x7c;
+hl_hex /= 255;
+bl_hex /= 255;
+hl_hex = Math.pow(hl_hex, 2);
+bl_hex = Math.pow(bl_hex, 2);
+var mult = hl_hex-bl_hex, offs = bl_hex, blue_tweak = 0;
 // if (theme == "dark") {
 //     mult = 0.375; offs = 0.025, blue_tweak = 0.020;
 // }

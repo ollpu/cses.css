@@ -28,10 +28,10 @@ $score-colors-as-fg: true;
 $score-default-bg: #ffffff12;
 $task-score-bg-cols: (
   initial: #888,
-  full:    #6ff079,
-  zero:    #f06f6f,
-  partial: #f0f36a,
-  busted:  #7e7e7e,
+  full:    #7cf07c,
+  zero:    #f07c7c,
+  partial: #f0f07c,
+  busted:  #bbb,
   pending: #9a9ef2,
 );
 $icpc-task-bg-cols: (

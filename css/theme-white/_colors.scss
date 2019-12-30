@@ -23,9 +23,9 @@ $task-score-text-col: $text-col;
 $score-colors-as-fg: false;
 $task-score-bg-cols: (
   initial: #c8c8c8,
-  full:    #6ff079,
-  zero:    #f06f6f,
-  partial: #f0f36a,
+  full:    #7cf07c,
+  zero:    #f07c7c,
+  partial: #f0f07c,
   busted:  #7e7e7e,
   pending: #9a9ef2,
 );
@@ -37,7 +37,7 @@ $icpc-task-bg-cols: (
 );
 $verdict-bg-cols: (
   unknown: map-get($task-score-bg-cols, initial),
-  ac: #8ee995,
+  ac: #8ee98e,
   wa: #e98e8e,
   // other error colors might not be used (too colorful?)
   tle: #c78ee9,
