@@ -17,6 +17,23 @@
   text-rendering: auto;
 }
 
+@mixin iconses() {
+  font-family: 'Iconses';
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+}
+
+@mixin use-fontawesome-instead() {
+  font-family: 'Font Awesome 5 Free';
+}
+@mixin use-iconses-instead() {
+  font-family: 'Iconses';
+}
+
 @mixin mobile() {
   @media screen and (max-width: #{$responsive-mobile-breakoff}) {
     @content;

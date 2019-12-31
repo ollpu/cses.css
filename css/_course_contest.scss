@@ -90,13 +90,13 @@
   // Use an icon if specified
   &.icon {
     &:before {
-      @include fontawesome();
-      content: '\f068'; // "minus"
+      @include iconses();
+      content: '\f102'; // "initial"
     }
-    &.full:before { content: '\f00c'; } // "check"
-    &.zero:before { content: '\f00d'; } // "times"
-    &.busted:before { content: '\f714'; } // "skull-crossbones"
-    &.pending:before { content: '\f059'; font-weight: 400; } // "question-circle"
+    &.full:before { content: '\f101'; } // "acc"
+    &.zero:before { content: '\f103'; } // "wa"
+    &.busted:before { @include use-fontawesome-instead(); content: '\f714'; } // "skull-crossbones"
+    &.pending:before { @include use-fontawesome-instead(); content: '\f059'; font-weight: 400; } // "question-circle"
   }
 }
 
