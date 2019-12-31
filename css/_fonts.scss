@@ -1,9 +1,9 @@
 
 @font-face {
-    font-family: "Iconses";
-    src: url("./Iconses.eot?e24e8050ce07a0287e6230f36fc6b927?#iefix") format("embedded-opentype"),
-url("./Iconses.woff2?e24e8050ce07a0287e6230f36fc6b927") format("woff2"),
-url("./Iconses.woff?e24e8050ce07a0287e6230f36fc6b927") format("woff"),
-url("./Iconses.ttf?e24e8050ce07a0287e6230f36fc6b927") format("truetype"),
-url("./Iconses.svg?e24e8050ce07a0287e6230f36fc6b927#Iconses") format("svg");
+  font-family: "Iconses";
+  src: url("/lib/iconses/Iconses.eot?#iefix") format("embedded-opentype"),
+       url("/lib/iconses/Iconses.woff2") format("woff2"),
+       url("/lib/iconses/Iconses.woff") format("woff"),
+       url("/lib/iconses/Iconses.ttf") format("truetype"),
+       url("/lib/iconses/Iconses.svg#Iconses") format("svg");
 }
