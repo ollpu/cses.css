@@ -60,10 +60,13 @@ code {
   label {
     display: block;
   }
-  > input, > select {
+  > input, > select, > textarea {
     display: block;
     width: 100%;
     margin: 0.3em 0 0.6em;
+  }
+  > textarea {
+    height: 10em;
   }
   > input[type=submit], button {
     width: initial;
@@ -195,25 +198,67 @@ code {
   .next:before { content: '\f105'; } // "angle-right"
 }
 
-input[type="submit"], button {
-  background: $bgcol;
-  color: $text-col;
-  border: 1px solid $light-border-col;
-  border-radius: 2px;
-  padding: 0.2em 0.6em;
+input[type="submit"], button, input[type="text"] {
   font-family: inherit;
+  font-size: inherit;
+  color: $text-col;
+  border: 1px solid $mid-border-col;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: box-shadow 0.4s;
   
+  outline: 0;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+textarea {
+  border: 1px solid $mid-border-col;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: box-shadow 0.4s;
+  resize: both;
+  
+  outline: 0;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+input[type="submit"], button {
+  background: $secondary-bgcol;
+  padding: 0.3em 1.4em;
   cursor: pointer;
-  // Needs hover styles
-  // outline: 0;
-  // &::-moz-focus-inner {
-  //   border: 0;
-  // }
+  
   
   @include light-shadow();
+  &:focus {
+    border-color: $accent-border-col;
+    border-width: 2px;
+    padding: calc(0.3em - 1px) calc(1.4em - 1px);
+  }
+  &:hover {
+    @include light-shadow(1.8, 0.25);
+  }
   &:active {
-    background: $secondary-bgcol;
-    @include light-shadow-inset();
+    background: darken($secondary-bgcol, 10%);
+    color: scale-color($text-col, $alpha: -40%);
+    @include light-shadow-inset($color: $accent-border-col);
+  }
+}
+
+input[type="text"], textarea {
+  background: none;
+  padding: 0.3em 0.4em;
+  @include light-shadow(1, 0);
+  &:hover {
+    @include light-shadow(1, 0.2);
+  }
+  &:focus {
+    border-color: $accent-border-col;
+    border-width: 2px;
+    padding: calc(0.3em - 1px) calc(0.4em - 1px);
   }
 }
 
