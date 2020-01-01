@@ -8,9 +8,11 @@
     wierd transforms FreeCAD left there.
   - Make separate SVGs for each icon and name them appropriately.
 - Convert to an icon font with `icon-font-generator` from npm.
-```
-icon-font-generator set/*.svg -o [target] -n Iconses
-```
+  
+  ```
+  icon-font-generator set/*.svg -o [target] -n Iconses
+  ```
+  
   - This is quite brittle now, since the icons will be given codepoints solely
     based on their alphabetical order. This will need to be done diffently in
     the future (maybe use the underlying library that icon-font-generator uses?)
