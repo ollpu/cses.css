@@ -26,5 +26,5 @@ $responsive-mobile-breakoff: 50em;
 
 // Compensate larger borders to avoid changing total size, used in forms
 @function border-comp($val) {
-  @return calc($val - #{$thick-border-width - $border-width});
+  @return calc(#{$val} - #{$thick-border-width - $border-width});
 }
