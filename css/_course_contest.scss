@@ -66,6 +66,10 @@
       min-width: 5em;
     }
   }
+  .detail {
+    font-size: $details-size * 1em;
+    opacity: 0.6;
+  }
 }
 
 .task-score, .contest-score {
