@@ -6,12 +6,12 @@
   margin: 0;
   padding: 0;
   @extend .wide;
-  border-top: 1px solid $light-border-col;
+  border-top: $border-width solid $light-border-col;
   
   > li {
     display: flex;
     line-height: $item-line-height;
-    border-bottom: 1px solid $light-border-col;
+    border-bottom: $border-width solid $light-border-col;
     overflow: hidden;
     &:hover {
       background-color: $nav-item-hover-col;
@@ -110,7 +110,7 @@
   @if not $score-colors-as-fg {
     color: $task-score-text-col;
   }
-  border: 1px solid $light-border-col;
+  border: $border-width solid $light-border-col;
 }
 
 .inline-score {
@@ -203,7 +203,7 @@
   }
   col.score {
     width: 4em;
-    border-right: 2px solid $border-col;
+    border-right: $thick-border-width solid $border-col;
   }
   col.task {
     width: 3.5em;
@@ -228,7 +228,7 @@
     min-width: 8em;
   }
   col.time {
-    border-right: 2px solid $border-col;
+    border-right: $thick-border-width solid $border-col;
   }
   col.task {
     width: 3.5em;

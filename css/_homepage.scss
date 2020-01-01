@@ -27,6 +27,6 @@
     margin: 0;
     padding-bottom: $box-title-spacing;
     margin-bottom: $box-title-spacing;
-    border-bottom: 1px solid $colored-bg-border-col;
+    border-bottom: $border-width solid $colored-bg-border-col;
   }
 }

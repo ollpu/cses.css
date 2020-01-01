@@ -1,10 +1,9 @@
-
-@import 'fonts';
-
+// Meta-sass
 @import 'dimensions';
 @import 'colors'; // from theme
 @import 'mixins';
 
+@import 'fonts';
 // Order is important: a:link etc colors conflict with some base styles
 @import 'content';
 @import 'base';

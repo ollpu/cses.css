@@ -13,7 +13,7 @@ table {
 
 tr {
   border-style: solid;
-  border-width: 1px 0;
+  border-width: $border-width 0;
   border-color: $border-col;
 }
 
@@ -22,12 +22,12 @@ tbody > tr:nth-child(even) {
 }
 
 thead {
-  border-bottom: 2px solid $border-col;
+  border-bottom: $thick-border-width solid $border-col;
 }
 
 td, th {
   border-style: solid;
-  border-width: 0 1px;
+  border-width: 0 $border-width;
   border-color: $border-col;
   padding: 0.06em 0.4em;
 }
@@ -41,7 +41,7 @@ caption, .caption {
 
 hr {
   border: none;
-  border-top: 1px solid $border-col;
+  border-top: $border-width solid $border-col;
 }
 
 pre, samp {
@@ -202,7 +202,7 @@ input[type="submit"], button, input[type="text"] {
   font-family: inherit;
   font-size: inherit;
   color: $text-col;
-  border: 1px solid $mid-border-col;
+  border: $border-width solid $mid-border-col;
   border-radius: 3px;
   box-sizing: border-box;
   transition: box-shadow 0.4s;
@@ -214,7 +214,7 @@ input[type="submit"], button, input[type="text"] {
 }
 
 textarea {
-  border: 1px solid $mid-border-col;
+  border: $border-width solid $mid-border-col;
   border-radius: 3px;
   box-sizing: border-box;
   transition: box-shadow 0.4s;
@@ -235,8 +235,8 @@ input[type="submit"], button {
   @include light-shadow();
   &:focus {
     border-color: $accent-border-col;
-    border-width: 2px;
-    padding: calc(0.3em - 1px) calc(1.4em - 1px);
+    border-width: $thick-border-width;
+    padding: border-comp(0.3em) border-comp(1.4em);
   }
   &:hover {
     @include light-shadow(1.8, 0.25);
@@ -257,8 +257,8 @@ input[type="text"], textarea {
   }
   &:focus {
     border-color: $accent-border-col;
-    border-width: 2px;
-    padding: calc(0.3em - 1px) calc(0.4em - 1px);
+    border-width: $thick-border-width;
+    padding: border-comp(0.3em) border-comp(0.4em);
   }
 }
 

@@ -13,7 +13,8 @@ $default-content-width: $default-width - 2*$default-side-padding - $sidebar-widt
 $narrow-content-width: 30rem;
 $form-width: 20rem;
 
-
+$border-width: 1px;
+$thick-border-width: 2px;
 $light-shadow-size-base: 0.05rem;
 
 $nav-spacing-vert:  0.19rem;
@@ -22,3 +23,8 @@ $nav-spacing-horiz: $default-side-padding;
 $box-title-spacing: $default-side-padding/2;
 
 $responsive-mobile-breakoff: 50em;
+
+// Compensate larger borders to avoid changing total size, used in forms
+@function border-comp($val) {
+  @return calc($val - #{$thick-border-width - $border-width});
+}
