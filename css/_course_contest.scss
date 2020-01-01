@@ -40,6 +40,9 @@
     width: 2.8rem;
     text-align: center;
   }
+  > li > span {
+    margin-left: .4rem;
+  }
   $icon-size: 1;
   $details-size: 0.8;
   .task-score {
@@ -53,7 +56,6 @@
     justify-content: center;
     
     width: 5rem;
-    margin-left: .4rem;
     &.icon {
       font-size: $icon-size * 1em;
       line-height: 1/$icon-size * $item-line-height;
