@@ -222,6 +222,7 @@ input[type="submit"], button, input[type="text"] {
 }
 
 textarea {
+  color: $text-col;
   border: $border-width solid $mid-border-col;
   border-radius: 3px;
   box-sizing: border-box;
