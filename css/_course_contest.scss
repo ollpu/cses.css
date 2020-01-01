@@ -1,4 +1,4 @@
-// Task lists
+// Task lists on course/contest pages
 .task-list {
   $item-line-height: 1.6;
   
@@ -113,12 +113,8 @@
   border: $border-width solid $light-border-col;
 }
 
-.inline-score {
-  display: inline-block;
-  padding: 0 0.4em;
-  border-radius: 3px;
-}
-
+// Similar to .task-score, but for verdicts. There is a different set of options
+// between them and some different colors for some reason.
 .verdict {
   color: $task-score-text-col;
   $col-property: background-color;
@@ -133,6 +129,14 @@
   }
 }
 
+// May be used with .task-score or .verdict
+.inline-score {
+  display: inline-block;
+  padding: 0 0.4em;
+  border-radius: 3px;
+}
+
+// Actions to show/save/copy an IO-example
 .samp-actions {
   float: right;
   > a {
@@ -170,6 +174,9 @@
 }
 
 // Scoreboards
+// The wrapper is necessary for allowing the scoreboard to grow beyond the normal
+// sekeleton and still be centered. Would be really nice if it was aligned left
+// until it got too wide, but that didn't want to happen easily.
 .scoreboard-wrapper {
   width: 100%;
   box-sizing: border-box;

@@ -7,6 +7,7 @@ a {
   }
 }
 
+// Table styles
 table {
   border-collapse: collapse;
 }
@@ -32,12 +33,74 @@ td, th {
   padding: 0.06em 0.4em;
 }
 
+// Common table mixins
+.brief-col {
+  min-width: 6em;
+}
+.details-col {
+  width: 1em;
+}
+.small-col {
+  width: 0;
+}
+.details-link {
+  font-size: 0;
+  display: inline-block;
+  &:before {
+    font-size: 1.2rem;
+    @include fontawesome();
+    content: '\f101'; // "angle-double-right"
+  }
+}
+
+// Lightweight table, e.g. a summary
+.summary-table {
+  td, th {
+    border-style: none;
+  }
+  tr {
+    border-top: none;
+    border-bottom-color: $light-border-col;
+    background-color: initial;
+  }
+}
+// Mixin class, mainly for .summary-table
+.left-align {
+  text-align: left;
+  th {
+    text-align: left;
+  }
+}
+
+.closeable {
+  &.closed {
+    // The close-trigger often resides inside caption, so we don't want to hide that
+    > tbody, > thead, > tfoot, > div {
+      display: none;
+    } 
+    > .close-trigger:after {
+      content: '\f0d7'; // "caret-down"
+    }
+  }
+}
+
+.close-trigger {
+  cursor: pointer;
+  &:after {
+    @include fontawesome();
+    content: '\f0d8'; // "caret-up"
+    margin-left: 0.4em;
+    color: $mid-border-col;
+  }
+}
+
 caption, .caption {
   text-align: left;
   font-weight: bold;
   font-size: 1.2em;
   margin: 0.8em 0 0.4em 0;
 }
+
 
 hr {
   border: none;
@@ -74,26 +137,7 @@ code {
   }
 }
 
-// Common table styles
-.brief-col {
-  min-width: 6em;
-}
-.details-col {
-  width: 1em;
-}
-.small-col {
-  width: 0;
-}
-.details-link {
-  font-size: 0;
-  display: inline-block;
-  &:before {
-    font-size: 1.2rem;
-    @include fontawesome();
-    content: '\f101'; // "angle-double-right"
-  }
-}
-
+// Mixin classes for blocks
 .float {
   float: right;
   margin: 0.4rem 0.6rem;
@@ -102,25 +146,6 @@ code {
   .float {
     float: none;
     margin: 0.4rem auto;
-  }
-}
-
-// Lightweight table, e.g. a summary
-.summary-table {
-  td, th {
-    border-style: none;
-  }
-  tr {
-    border-top: none;
-    border-bottom-color: $light-border-col;
-    background-color: initial;
-  }
-}
-// Mixin class, mainly for .summary-table
-.left-align {
-  text-align: left;
-  th {
-    text-align: left;
   }
 }
 
@@ -136,25 +161,6 @@ code {
   width: 100%;
 }
 
-.closeable {
-  &.closed {
-    > tbody, > thead, > tfoot, > div {
-      display: none;
-    } 
-    > .close-trigger:after {
-      content: '\f0d7'; // "caret-down"
-    }
-  }
-}
-.close-trigger {
-  cursor: pointer;
-  &:after {
-    @include fontawesome();
-    content: '\f0d8'; // "caret-up"
-    margin-left: 0.4em;
-    color: $mid-border-col;
-  }
-}
 
 // Pagination selector
 .pager {
@@ -197,6 +203,8 @@ code {
   .prev:before { content: '\f104'; } // "angle-left"
   .next:before { content: '\f105'; } // "angle-right"
 }
+
+// Form element styles
 
 input[type="submit"], button, input[type="text"] {
   font-family: inherit;
